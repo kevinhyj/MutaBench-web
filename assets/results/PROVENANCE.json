@@ -1,0 +1,289 @@
+{
+  "verified_on": "2026-10-20",
+  "method": "Saved matched-cohort metrics; no inference or query-label reads. Rankings use unrounded scores. Protocol families remain separate.",
+  "sources": {
+    "protein": {
+      "directory": "pipeline/fig/final/single_chain/protein/data_best_arm_n17_20261018_v1",
+      "n_assays": 17,
+      "model_count": 10,
+      "cohort": [
+        "AMFR_HUMAN_Tsuboyama_2023_4G3O",
+        "BRCA1_HUMAN_Findlay_2018",
+        "CAR11_HUMAN_Meitlis_2020_gof",
+        "CASP3_HUMAN_Roychowdhury_2020",
+        "CASP7_HUMAN_Roychowdhury_2020",
+        "CBPA2_HUMAN_Tsuboyama_2023_1O6X",
+        "CBS_HUMAN_Sun_2020",
+        "CP2C9_HUMAN_Amorosi_2021_abundance",
+        "CSN4_MOUSE_Tsuboyama_2023_1UFM",
+        "D7PM05_CLYGR_Somermeyer_2022",
+        "DN7A_SACS2_Tsuboyama_2023_1JIC",
+        "DNJA1_HUMAN_Tsuboyama_2023_2LO1",
+        "DOCK1_MOUSE_Tsuboyama_2023_2M0Y",
+        "ERBB2_HUMAN_Elazar_2016",
+        "GDIA_HUMAN_Silverstein_2021",
+        "GRB2_HUMAN_Faure_2021",
+        "HSP82_YEAST_Cote-Hammarlof_2020_growth-H2O2"
+      ],
+      "files": {
+        "plotted_means.csv": "b9c7868c848ac95994d2f6737a7b35d026a7ae356d52e578e3a2fe6fa3ba6560",
+        "plotted_assay_scores.csv": "ced284284bab9a842673a073f2b38ea8a14342b69e112d28c381a598188ef2b6",
+        "manifest.json": "872515bc0e0e11540cd3824f8879f12a7dfb4767291fe935528bce26b28e208b",
+        "query_checks.json": "bf069d6d1c7936fc6d78ef80bc91d3a6a83287dd2af1a26a8bc036855f6ddfb8",
+        "arm_selection.json": "5ea4e54c5c0e4d2ed5de718bcf1f2740f769f268b407536a6727106a277240b6",
+        "baseline_selection.json": "e86f1de9d80409df8fae023d686d8622cecb42e1f19952d6525d0059831c7aa7"
+      },
+      "notes": "This saved comparison retains ESM-2 and selects four other specialists by mean score on these 17 assays. LLM input configurations were also selected on the displayed cohort. These are descriptive rankings, not an independently validated model-selection result."
+    },
+    "rna": {
+      "directory": "pipeline/fig/final/single_chain/rna/data_best_arm_n28_20261018_v1",
+      "n_assays": 28,
+      "model_count": 11,
+      "cohort": [
+        "Andreasson_2020_ribozyme",
+        "Beck_2022_ribozyme",
+        "Domingo_2018_tRNA",
+        "Guy_2014_tRNA",
+        "Janzen_2022_fam1a1_ribozyme",
+        "Janzen_2022_fam1b1_ribozyme",
+        "Janzen_2022_fam21_ribozyme",
+        "Janzen_2022_fam22_ribozyme",
+        "Janzen_2022_fam31_ribozyme",
+        "Ke_2017_mRNA",
+        "Kobori_2015_ribozyme_tw",
+        "Kobori_2016_osa_ribozyme",
+        "Kobori_2018_ribozyme",
+        "Li_2016_tRNA",
+        "McRae_2024_5tu_ribozyme",
+        "McRae_2024_t1_ribozyme",
+        "Peri_2022_ribozyme",
+        "Roberts_2023_cepeb3_ribozyme",
+        "Roberts_2023_hh_ribozyme",
+        "Roberts_2023_hp_ribozyme",
+        "Roberts_2023_tw_ribozyme",
+        "Soo_2021_ribozyme",
+        "Tome_2014_GFP_aptamer",
+        "Tome_2014_NELFE_aptamer",
+        "Zhang_2020_cpeb3_ribozyme",
+        "Zhang_2024_OR4K15_ribozyme",
+        "Zhang_2024_line1_full_ribozyme",
+        "Zhang_2024_line1_mini_ribozyme"
+      ],
+      "files": {
+        "plotted_means.csv": "0ac35bfe20664a6dec83ce56a9132d87b19ba18e1c7ac66ef8a0d4e74d5193aa",
+        "plotted_assay_scores.csv": "c47795fc90ee24edf99fc08b571baba68a12553350eb5192ae75f0fecd4fa2b6",
+        "manifest.json": "fad84b59c5308b11ca51a5d40d5ef74f31f4f78975b6095d0d833dea8763ae5f",
+        "query_checks.json": "3c126a1ce96868eed06e7f7bd7824d1b4bf8620d476cf561b11acff234ac728f",
+        "arm_selection.json": "85752681ec73dce90c8bdbeb8125cf4b952a1fb77fbb70104f3a68f9006a2112"
+      },
+      "notes": "One complete input configuration per LLM is selected by mean score on these 28 assays. DeepSeek is absent from this saved comparison because coverage was insufficient; the shorter-query assay is excluded. These are descriptive rankings on the displayed cohort."
+    },
+    "ligand": {
+      "directory": "pipeline/fig/final/single_chain/ligand/classification/data_n10_20261018_v1",
+      "n_assays": 10,
+      "model_count": 8,
+      "cohort": [
+        "ames",
+        "bbb_martins",
+        "bioavailability_ma",
+        "cyp2c9_substrate_carbonmangels",
+        "cyp2d6_substrate_carbonmangels",
+        "cyp3a4_substrate_carbonmangels",
+        "dili",
+        "herg",
+        "hia_hou",
+        "pgp_broccatelli"
+      ],
+      "files": {
+        "plotted_means.csv": "f8e746289cd16efc65d36302c37d1880fe693ff915745f0aa6ad96316eb4824f",
+        "plotted_assay_scores.csv": "d142a378abf5b482398dc50821a611ebbc6703aaaa9c66132f5f455e2ef951bd",
+        "manifest.json": "898bcc62bd572a16a95d33c7f32011043403681c042f0343050ef96c149da1dd",
+        "query_checks.json": "aedddf3cbccbcc88f1194a867e901ca1de20a48f3eaf84b98eaa9c140670d540",
+        "arm_selection.json": "75caa1ff4ab76a5009234f1e8191d40963df39f59ae88eccc8a872f9dc87c279"
+      },
+      "notes": "LLMs use zero-shot prompts and CR3: average three predictions per molecule, then compute AUROC within each endpoint. The four baselines were trained on endpoint train/validation data, so supervision budgets differ. DeepSeek and three incompletely covered endpoints are excluded from this saved comparison. Best LLM configurations are selected on this same cohort."
+    },
+    "ligand-regression": {
+      "directory": "pipeline/fig/final/single_chain/ligand/regression/data_n8_20261018_v1",
+      "files": {
+        "plotted_means.csv": "2f62cac949537ac7d33e9b0f5bfeb1d57db186765caf0d10c9610e6bd972b130",
+        "plotted_assay_scores.csv": "094771af800d457a402c269f310bf9774caca5280b872ae94134704aad06a2d8",
+        "manifest.json": "fecea6792d2058019b1686267db982f051955cfbd258b10d029e9fbc279156c0",
+        "arm_selection.json": "b86a4d5ee672639594fa43a3d367da154a7ddcab1cc6c295cc3d9383f5f6c37e",
+        "query_checks.json": "6005038735678c9feb8207cfe9dc1466fb2c3cda51b340ce5cd853cb83ffdcbe"
+      },
+      "n_assays": 8,
+      "model_count": 8,
+      "cohort": [
+        "caco2_wang",
+        "clearance_hepatocyte_az",
+        "clearance_microsome_az",
+        "half_life_obach",
+        "ld50_zhu",
+        "lipophilicity_astrazeneca",
+        "ppbr_az",
+        "vdss_lombardo"
+      ]
+    },
+    "protein-protein": {
+      "directory": "pipeline/fig/final/complex/protein-protein/data",
+      "files": {
+        "plotted_means.csv": "9d295a7d347c422b76dc3ec242cf59b9823d44ddf7319c79d50ef915b68efcee",
+        "plotted_assay_scores.csv": "1b70d0524587ba39da73f1abca7100f3316f5603bc63393cac2265008fb9150f",
+        "manifest.json": "0893b0214f00accef1093c1badb71a10af4bbb817b16cb173561a63f8f467031",
+        "arm_selection.json": "42421d2f4fe0aec5d9299db2aa3d6425d4c9791060563e3fb7ecd00b1ca4c3df"
+      },
+      "n_assays": 5,
+      "model_count": 9,
+      "cohort": [
+        "272ef615e4ded8191fc77b8e",
+        "29498ab8df250c3f9ff7d126",
+        "44ed04055a320dbe2cbe91bc",
+        "52c75ac017901e09f8a35afb",
+        "639c3f36c14a412d81947136"
+      ]
+    },
+    "protein-rna": {
+      "directory": "pipeline/fig/final/complex/protein-rna/data",
+      "files": {
+        "plotted_means.csv": "bed19de73d0a388995db42e007374220d83b2348550e3a16c589d3e22d91436f",
+        "plotted_assay_scores.csv": "4a5ceab190108164ab58d3870e7dc2cdd1e64e9c880fd3503a9596e48da51637",
+        "manifest.json": "6f35142d20e01b44201764b64ee8e4e533d3f27d28fdf006e30fe5dd64b163b2",
+        "arm_selection.json": "1952b6dac0f12fddd9474f833c7a7cfa43859af8f88db3bac4a6621d120cb392"
+      },
+      "n_assays": 7,
+      "model_count": 10,
+      "cohort": [
+        "40b6fa38b3346162325d0b1b",
+        "4ae5befb19e40c656a775779",
+        "78421dccc0ef5fe75dbbc934",
+        "bea77674cac7a5020bb1b20f",
+        "c2e16622ff31986237ed5259",
+        "d6ee592a1ec9d2c05dd3f260",
+        "dd0cd083121070c402e392b3"
+      ]
+    },
+    "protein-dna": {
+      "directory": "pipeline/fig/final/complex/protein-dna/data",
+      "files": {
+        "plotted_means.csv": "cce6dacff1f7727126d0e82b7b284e8d8b9c1b8946262c17c22d68ff5b8be760",
+        "plotted_assay_scores.csv": "0fd5b82ab341e562648dba3f60f26865adb803a7d87c197df4f1041fe82131f6",
+        "manifest.json": "c8a2073644ed9b7b2cf225834280529d99ab858097bd285f57fde3695804e55a",
+        "arm_selection.json": "4a495a8efd4b4b317282ba2365fc6ae9e2b2d5122e70d4b5794130cbe1fd4621"
+      },
+      "n_assays": 15,
+      "model_count": 10,
+      "cohort": [
+        "0ca3450d94d3a214fb734f7b",
+        "1a7ceb9d64eeb4b809908807",
+        "1e675b83523a6ccaf924e3f4",
+        "21312178d377068f66615eea",
+        "32d65a1846fef6b5ee925dad",
+        "3b661ca43db9a893be43ec63",
+        "4d2f539f7fc6b03ce004689e",
+        "65bb4e6b1f65209667cbc9e7",
+        "855757d7b049de7489fd675c",
+        "86d236392aabccec5c3a5f6c",
+        "9f4f396fbf8247077f6be56e",
+        "a37a53380d7868256e9021a4",
+        "a797faa896a867b371141bf1",
+        "ee5e0dcd307d25d6066bdac0",
+        "fed5aad44559e02566c86109"
+      ]
+    },
+    "protein-ligand": {
+      "directory": "pipeline/fig/final/complex/protein-ligand/data",
+      "files": {
+        "plotted_means.csv": "cde8dcaa78d9dae1eafa447afa4985a4d28e3c761b2d132b8fa4a7bee0ed69fe",
+        "plotted_assay_scores.csv": "8feec27f13802de73395ff46a7e93aa9286863d9a56b1230f24883cac87be680",
+        "manifest.json": "f08df54ba5c9ca57495875a1b88cfc3611301dbb79dbe85ab3f6c30e0566cd05",
+        "arm_selection.json": "f13d75747a396a2f5d992d5290fc6202a35a47d080a9278504c2766b0427b837"
+      },
+      "n_assays": 4,
+      "model_count": 9,
+      "cohort": [
+        "3715113c31f4ac2e0c5e61dc",
+        "5c04bc7ab59e3f6cbb77f7b1",
+        "a7faf76befb58d6431198737",
+        "dd86465f441fbaeef00c1045"
+      ]
+    },
+    "few-baselines": {
+      "directory": "reports/fewshot_figure_refresh_20261001/organized_20261008/data",
+      "files": {
+        "PLOT_DATA.csv": "e70ecd3f4760fb89f96bfbb104bf87ab9d710a9c9971a418d1600c075cf30895",
+        "STATISTICS_REFERENCE.csv": "dc6d6190ce1bbd42f55894d76e81c2b285172c02225e2db566b1afd0cc3e9cc6"
+      },
+      "note": "Matched original Flash and RF/SVR panels only; do not merge differently covered appended LLM averages."
+    },
+    "few": {
+      "directory": "reports/five_model_fewshot_assay_comparison_20261015_v2",
+      "files": {
+        "FIVE_WAY_PAIRED.json": "8f9cd1097346b4b72ff7be84a2f00bd4eefd9757850656c80a31ac83ee46901d",
+        "SUMMARY.csv": "ca14a03c61cd0bfb2c0f0bd16b0ee50ce5441ab644540b6d42b90d7382361760",
+        "README.md": "92b70b27b529f830f972c280fabefb9f8f9355dc2399adbdf3710a2f484ca1db"
+      },
+      "note": "Only aggregate scores exported; query hashes used for validation, not published."
+    },
+    "multi": {
+      "directory": "reports/fewshot_figure_refresh_20261001/multiround_complete_evolvepro_20261019_v2",
+      "files": {
+        "PLOT_DATA.csv": "be4f5ce9920623817c1e609f5f6b8cc8228b5b74e02f2f2730dbcdc6032f005a",
+        "VALIDATION.json": "ab38c9128c7b39d248f886efe9adf218c5c7d1bd3e06de618740aa4939c4528e",
+        "README.md": "047f2dccd90dfe00f20815f6503881af86e39f354034084878159accac5b1779"
+      },
+      "note": "Saved PASS aggregate report; source hashes checked. PPI validation did not replay RF. One seed; no multi-seed confidence claim."
+    },
+    "external500": {
+      "directory": "pipeline/fig/final/external/data_phaseflow_external500_20261018_v1",
+      "files": {
+        "plotted_metrics.csv": "bbdd577edbcfb868763a58c1b9a56dece9874ade40d540dfec0a0e277617390f",
+        "manifest.json": "be3799fbf7e8eec1ed30acc33efbb4e5128f5e8726c70c93ef1978fb9e121b49",
+        "README.txt": "e3da2bf76af608074fe9afd8ad58b5072610debd0bca7985d43870a880f65d23"
+      },
+      "query_n": 500,
+      "model_count": 8,
+      "input_validation": {
+        "path": "pipeline/fig/final/_source/phaseflow_external500_add_three_llms_20261019_v1/INPUT_VALIDATION.json",
+        "sha256": "e9be834ff1af6067058008fb14cda3856ed9094484d93ed6ba8d10559b3dbc9c"
+      }
+    },
+    "private1000": {
+      "directory": "pipeline/fig/final/external/data_phaseflow_private1000_20261018_v3",
+      "files": {
+        "plotted_metrics.csv": "797ef03586dcd9391e09018ab5abd653b247b61e7a1d96aa4bef239c765d63c6",
+        "manifest.json": "33e30192570047c00ae1dec1b9c49c6028c781a3d32883e56085801d8e41b60a",
+        "README.txt": "7f6c2214367df6298a5720e3e90abf5f388aa282feb1851a7f644ade445492b2"
+      },
+      "query_n": 1000,
+      "model_count": 10,
+      "input_validation": {
+        "path": "pipeline/fig/final/_source/phaseflow_private1000_add_argon_20261019_v1/INPUT_VALIDATION.json",
+        "sha256": "268982a28abd285c12f7dd3d86aa2db285ea496581d6b4d83cfbb9ace05b2c4a"
+      }
+    }
+  },
+  "complex_identity_audit": {
+    "path": "pipeline/fig/final/_source/complex_best_arm_20261016_v1/snapshot/03_query_audit.json",
+    "sha256": "d77cbe1871f56a507721fa7ab1ae8182baf65c259bfc4dd122ce616c3d056235"
+  },
+  "complex_completion_sources": {
+    "pipeline/zeroshot/results/comparison/snapshot_20261014T170902Z/per_assay.csv": "872456a600b9fc5f81798b63863ddfe090cbc9f6c4436c55bf45942652b834d3",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/argon_high/evaluation/METRICS.json": "5cc99191c9c848dcdcceaf648a8fc4240c158c06515711079e2fbeb0814a7b87",
+    "pipeline/zeroshot/runs/ppi29_rna10_lexical2048_six_sol30_other20_20261015_v1/models/argon_high/evaluation/METRICS.json": "e380882c1a54d3f36ff1c713c93dc33a98cdf8584f3c3288234d70a89b12f5c3",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/flash38_medium/evaluation/METRICS.json": "6bfcbdf5404d210f30d658235cf8328d792cc1312da7046d9b82cf4d31c80185",
+    "pipeline/zeroshot/runs/ppi29_rna10_lexical2048_six_sol30_other20_20261015_v1/models/flash38_medium/evaluation/METRICS.json": "f8c65fef20df2bd53e8b63738c4c5fbf6f44875d0b580630085c5f4f529c016c",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/deepseek41_flash_max/evaluation/METRICS.json": "48fbb0d1f87eceb090bb0efe94a6844a123eb500debb83d1b371236ebff62db1",
+    "pipeline/zeroshot/runs/deepseek_four_complex_lexical2048_c100_20261015_v1/systems/protein_protein/evaluation/METRICS.json": "841824c24d62ff212d8cc450317259b174d88eb5cbe9ee1446085872fbe87b7d",
+    "pipeline/zeroshot/results/baseline_audit_20261016_v1/METRICS.json": "a61d948860cb8cef18e836b15e1c4a19a5050531951f05873ce200b8da54254f",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/sol61_max/evaluation/METRICS.json": "e64372cfda5410a2cf29c6e3ab41de712d680eb2f2069396bf1e27a841881423",
+    "pipeline/zeroshot/runs/ppi29_rna10_lexical2048_six_sol30_other20_20261015_v1/models/sol61_max/evaluation/METRICS.json": "75d666f89e113c4e56a374770a3d0808e2e32e79043ed857f1861098d029404b",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/qwen38_27b_high/evaluation/METRICS.json": "35ce9e6c3d907c16e962bb1243d56a19ad69b7f4016790d328e61e61ba901793",
+    "pipeline/zeroshot/runs/ppi29_rna10_lexical2048_six_sol30_other20_20261015_v1/models/qwen38_27b_high/evaluation/METRICS.json": "ff3d7225edf5e5ecae5fd025958fd10303a5df6a8b4028332f584faf7e1d1655",
+    "pipeline/zeroshot/runs/complex45_factual_v4_hyjpro2_resume_20261016_v3/models/flash38_low/evaluation/METRICS.json": "4eacefbb9f2bc8ba085b435fb929daad841ec6c5b689cee20632d131e7bb8e96"
+  },
+  "few_baseline_preservation_audit": {
+    "path": "reports/fewshot_figure_refresh_20261001/llm_appended_fixedwidth_nostar_20261016_v4/VALIDATION.json",
+    "sha256": "390ac88815d750cef0c2568be7b2d2f8f1bd0d246b639ed5ae969a8330ac72ab"
+  }
+}

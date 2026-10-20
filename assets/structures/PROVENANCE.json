@@ -1,0 +1,43 @@
+{
+  "scope": "Illustrative molecular artwork, not experimental coordinates.",
+  "palette": [
+    "#728AB9",
+    "#F5B5BF",
+    "#F5DDB5"
+  ],
+  "current_assets": "wr/PROVENANCE.json",
+  "source_generation": "wr/source-generation.json",
+  "rendering": "Unmodified source PNGs. structure-palette.js adapts the reference WebGL color mapping to three hues, preserving light and alpha. Whole assemblies retain the existing CSS motion. Original PNG fallback when WebGL is unavailable.",
+  "retired_component_artwork": {
+    "last_committed_version": "d1f562e",
+    "notes": "The old component PNGs were replaced by complete frontend-wr assemblies on 2026-10-20; recover old images from Git history if needed.",
+    "assets": [
+      {
+        "file": "protein.png",
+        "origin": "Built-in image_gen",
+        "prompt": "Use case: scientific-educational. Generate a polished 3D molecular ribbon illustration for a scientific benchmark website, ONE isolated compact single-chain globular protein. Authentic-looking folded protein cartoon representation: clearly visible alpha helices as wide curled ribbons, several beta sheets as flat pleated ribbon arrows, thin flexible connecting loops. Main ribbon color muted periwinkle blue #728AB9, a few soft rose #F5B5BF and pale gold #F5DDB5 secondary-structure sections; all sections belong to one continuous chain. Crisp sophisticated scientific rendering like a high-quality molecular visualization, satin materials, soft studio light, credible depth and shadows within the folds, no plastic blobs. Centered orthographic three-quarter view, object occupies 75% of a square canvas, ample clean margins, genuine fully transparent background. No floor, no cast shadow outside object, no text, no labels, no frame, no logos, no watermark. This is an illustrative protein fold, not a claim to a specific measured experimental structure."
+      },
+      {
+        "file": "rna.png",
+        "origin": "Built-in image_gen",
+        "prompt": "Scientific-educational 3D molecular illustration for a biomolecular benchmark website. Authentic-looking scientific molecular visualization, crisp high quality, soft studio lighting, satin materials, credible depth. Exact muted palette: periwinkle blue #728AB9, soft rose #F5B5BF, pale gold #F5DDB5. Centered orthographic three-quarter view, square canvas, whole object contained with 12% clean margins. Genuine transparent background. No floor, no external cast shadow, no text, no labels, no border, no logo, no watermark. This is a type-level illustrative molecular structure, not an experimentally identified structure. Show ONE folded SINGLE RNA strand, not DNA: a compact asymmetric L-shaped tRNA-like tertiary fold with several short paired stem regions and exposed hairpin loops. Draw phosphate-sugar backbone as a slender smooth rose tube; show individual nucleotide bases as small blue and gold sticks/plates tucked inside the stems. Make the stem-loop arrangement recognizable with fine molecular detail and an open L-shaped silhouette. No protein ribbons, no generic isolated DNA double helix."
+      },
+      {
+        "file": "dna.svg",
+        "origin": "Procedural 3D-projected geometry",
+        "generator": "../../tools/generate_structure_geometry.py"
+      },
+      {
+        "file": "ligand.svg",
+        "origin": "Procedural 3D-projected geometry",
+        "generator": "../../tools/generate_structure_geometry.py"
+      },
+      {
+        "file": "protein-protein.png",
+        "origin": "Built-in image_gen",
+        "created_on": "2026-10-19",
+        "description": "Two independently recognizable folded protein chains, blue and pink, meeting at a small pale-gold interface. Transparent type-level illustration, not an experimentally determined structure."
+      }
+    ]
+  }
+}

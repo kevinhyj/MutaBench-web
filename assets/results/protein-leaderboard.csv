@@ -1,0 +1,11 @@
+model,modelKey,type,score,input,assays,kind,thinking,arm,protocol,rank
+GPT 6.1 Sol,sol61_max,General-purpose LLM,0.5806022932240904,Sequence + MSA + structure,17,llm,max,msa_prompt_structure,Zero-shot,1
+AIDO Protein-RAG (16B),AIDO Protein-RAG (16B),Protein specialist,0.5772746986543901,Sequence + MSA + structure,17,baseline,,baseline,Zero-shot,2
+VenusREM,VenusREM,Protein specialist,0.5725894170588235,Sequence + MSA + structure,17,baseline,,baseline,Zero-shot,3
+Gemini 4 Argon,argon_high,General-purpose LLM,0.5702069668664899,Sequence + structure,17,llm,high,structure,Zero-shot,4
+ProSST (K=2048),ProSST (K=2048),Protein specialist,0.5638885840176471,Sequence + structure,17,baseline,,baseline,Zero-shot,5
+S3F-MSA,S3F-MSA,Protein specialist,0.5553719473235295,Sequence + MSA + structure,17,baseline,,baseline,Zero-shot,6
+Gemini 3.8 Flash,flash38_high,General-purpose LLM,0.5345301953191605,Sequence + MSA + structure,17,llm,high,msa_prompt_structure,Zero-shot,7
+ESM-2 (650M),ESM2 (650M),Protein specialist,0.4930796306117647,Sequence,17,baseline,,baseline,Zero-shot,8
+Qwen 3.8 27B,qwen38_27b_high,General-purpose LLM,0.42632765190762567,Sequence + MSA + structure,17,llm,high,msa_prompt_structure,Zero-shot,9
+DeepSeek V4.1,deepseek41_flash_max,General-purpose LLM,0.3790745667533779,Sequence + MSA + structure,17,llm,max,msa_prompt_structure,Zero-shot,10

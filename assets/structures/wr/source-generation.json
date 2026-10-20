@@ -1,0 +1,87 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "reference": "structure.png",
+  "purpose": "Task5 molecular illustration assets; illustrative only, not experimental coordinates.",
+  "assets": [
+    {
+      "key": "protein",
+      "file": "assets/molecular/task5/protein.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A SINGLE compact globular protein, asymmetric alpha/beta fold. Lavender ribbon cartoon with 5 clearly twisted beta arrows in a central curved sheet, 4 tightly coiled alpha helices around the sheet, thin realistic connecting loops. A small dusty-rose residue patch on the upper-right face. Genuine dense folded structural-biology cartoon, no enormous empty outer loops. No RNA/DNA/ligand.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-a8b4fbdf-ffec-4a98-afc4-f164dd4c1e9e.png",
+      "sha256": "c7069083ae4acca7c3626a9e0b55dcfc326bf69ad34d1f5b2b5c5a09b6506c01",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "rna",
+      "file": "assets/molecular/task5/rna.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A SINGLE complex folded RNA, a compact asymmetric branched three-way junction with three short double-stranded stems and distinct unpaired loops, rendered as sky-blue/cyan tubular sugar-phosphate backbone with visible thin paired base plates. Tertiary fold and bends, not a simple straight ladder and not a lone hairpin. One small dusty-rose patch at an upper-right loop. No protein or DNA.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-62011b19-77e3-4eb5-a2ca-ce8e10ec314d.png",
+      "sha256": "8febfa2e4542972cd533bb0e8d1c3ceedefddf29d920e457b8812792f3ab9f4b",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "protein-protein",
+      "file": "assets/molecular/task5/protein-protein.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A BOUND heterodimer of TWO DIFFERENT protein folds: left a lavender beta-sandwich with short helices, right a smaller teal alpha-helical bundle with thin connecting loops. The concave face of the beta-sandwich physically embraces and contacts the convex face of the helical bundle along a broad central protein-protein interface. Subunits actually touch with complementary shapes; no gap, no floating partners, no RNA/DNA. Render detailed realistic ribbons and beta arrows. Both subunits fit as one compact asymmetric complex.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-023f0bba-0161-4be4-be99-8add3fcca92d.png",
+      "sha256": "649c3690fe4c8235252a6f14edba09a5112fa8fbec4484f2bb4d6d364bf8b894",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "protein-rna",
+      "file": "assets/molecular/task5/protein-rna-v2.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A BOUND protein–RNA complex. Cream/buff solvent-excluded protein surface with small intricate bumpy atomic-scale texture and a deep curved cleft; a folded cyan/sky-blue RNA with a long bent stem and one short hairpin physically threads into and wraps snugly along the cleft. RNA backbone and base plates visible, RNA contacts multiple regions of protein. Strong close-fitting interface, not two isolated objects. Protein is a broad kidney-shaped cleft fold, different from a ball or a simple Pac-Man. Use the upper row surface representation of reference, with RNA backbone readable at the exposed ends.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-aa6ed62a-9712-40a4-8a4e-b4adcd505401.png",
+      "edits": [
+        {
+          "prompt": "Use case: precise-object-edit. Edit this transparent molecular illustration. Remove ONLY the isolated stray fuzzy gray oval/smudge at the extreme upper-right margin (outside and disconnected from the protein–RNA complex). Make all empty space outside the molecular complex fully transparent. Preserve the entire cream protein surface, bound blue RNA, all molecular geometry, size, position, colors, textures, lighting and edges exactly. No new elements, no cropping, no text, no shadow. This is a cleanup of background residue only.",
+          "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-ae7cd71b-dedc-42b4-915d-d9ebd4a574ae.png",
+          "reason": "Remove disconnected background residue; retain the bound complex."
+        }
+      ],
+      "sha256": "39880c006e3914088fb83c09c3e80bacf57bbcc1d7bb86c80f5de62e59ebbbc9",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "protein-dna",
+      "file": "assets/molecular/task5/protein-dna.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A BOUND protein–DNA complex in detailed molecular ribbon representation. A pale lavender two-lobed alpha-helical protein clamp with some mint-green connecting helices tightly embraces the major groove of a bent gold/pale-blue DNA double helix passing diagonally through its central channel. TWO DNA backbones and base-pair rungs visible; about 2 turns, ends exposed. Protein recognition helix is nestled in the DNA groove, convincing contact, not separated partners. The protein fold is elongated and helical, different from a beta-sandwich. One coherent bound complex.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-1d864904-9971-493e-8caf-02947f667643.png",
+      "sha256": "b97fe12c027910e66c01f4673dbf98d86c3cb4c27a2dd0165e7210462a08ef18",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "protein-ligand",
+      "file": "assets/molecular/task5/protein-ligand.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: A BOUND protein–small-molecule complex. Show a realistic cream/buff protein solvent surface forming a deep central binding pocket, textured with many tiny contiguous atomic lobes, not big cartoon balls. At the FRONT CENTRAL pocket a small gold-carbon/blue-nitrogen/red-oxygen ball-and-stick ligand with two rings is seated deeply, surrounded on three sides by complementary pocket walls. A few lavender protein ribbon segments visible at the back outer edge. The ligand is much smaller than protein but visibly discernible and physically bound, not outside the cavity. Protein surface should have asymmetric multi-lobed topology, not crescent/Pac-Man shape.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-f401c6a1-b715-471a-8e3d-d872e9923c41.png",
+      "sha256": "e34177ce99d9eb44b7d9f8d07cdd6123744541fb267c3914fe8cfb96c5847db5",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "classification",
+      "file": "assets/molecular/task5/classification.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: ONE small-molecule molecular model, compact rigid fused bicyclic ring scaffold with a short bent substituent chain, shown in a 3/4 structural rendering. Ball-and-stick, muted golden carbon, subdued blue nitrogen and dusty rose oxygen, realistic cylinders, spheres, valence-consistent bonds, soft ambient occlusion, clearly three-dimensional. No protein, nucleic acid, labels, arrows or interface. This is a generic illustrative small-molecule conformer, not a named chemical. Delicate scholarly molecular visualization style matching reference material and soft lighting.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-d1bc12fa-6791-4200-a980-1284c696bf46.png",
+      "sha256": "059e674953005664edcb7b666c4c393366b636f848315512b587ca38ff9139e8",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "key": "regression",
+      "file": "assets/molecular/task5/regression.png",
+      "prompt": "Use case: scientific-educational. Create ONE high-resolution transparent PNG molecular illustration asset for an academic desktop website. Input structure.png is STYLE REFERENCE ONLY: use its refined PyMOL/ChimeraX-like molecular rendering, 3D ribbons and finely textured surfaces, pastel lavender/cream/cyan/teal palette. Do not reproduce its multi-panel layout or any text. The subject must be structurally legible and richly detailed, not a flat vector icon, not a toy, no glow, no orbit lines, no labels, no arrows, no axes, no ground plane or cast shadow. Soft neutral studio illumination with subtle ambient occlusion and crisp edges on a transparent background. Composition: square canvas, entire subject centered, occupy ~82% of canvas, comfortable margins all sides, no cropping, consistent scale for a 420px-wide web viewer. This is conceptual scientific artwork, not an experimentally determined structure. Subject: ONE small-molecule molecular model with an elongated flexible topology: two NON-fused heterocyclic rings connected by a bent 4-bond linker plus a short branched polar side chain, different from a compact fused bicycle. 3/4 perspective, visibly non-coplanar torsion. Ball-and-stick, pale lavender carbon, muted blue nitrogen and dusty rose oxygen, accurate-looking cylindrical bonds and atom-sized spheres, soft ambient occlusion. No protein, nucleic acid, labels or graphs. Generic illustrative small-molecule conformer, not a named chemical. Delicate scholarly molecular visualization style matching reference.",
+      "source_path": "/home/huangyanjie/.codex/generated_images/01a1534e-4d47-7f33-918e-1589b3a7b1fe/exec-8f024dda-1324-4d51-a958-e9bf4928f6cd.png",
+      "sha256": "ad11d51fb09b245489be46bb013543a5ce6144109c84d606f47c3a9c70f49a93",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "reference_sha256": "5d0229f3e8a7daceae251daed4eac9bfebd6daacadd42f6e4695f618a6ca699c"
+}

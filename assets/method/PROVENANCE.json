@@ -1,0 +1,81 @@
+{
+  "verified_on": "2026-10-19",
+  "type": "Editable SVG and inline vector artwork; schematic tokens, no experimental scores",
+  "generator": "tools/generate_method_diagram.py",
+  "visual_references": [
+    {
+      "path": "../se.png (relative to frontend-wr-copy)",
+      "sha256": "1e8fe6bc4b0d9b50dba8b121577b152178ea22125c1cfd7c28e415346d9e8ddc",
+      "role": "User-supplied visual reference: evidence tiles, forked connectors, prediction surface."
+    }
+  ],
+  "visual_adaptation": "Task18 replaces the opaque circular model plate with open blue-pink streamlines and unbacked model labels. The task17 four-stage benchmark semantics and independent query-label route remain unchanged.",
+  "palette": [
+    "#728AB9",
+    "#F5B5BF",
+    "#F5DDB5",
+    "#33466f",
+    "#fffcfa"
+  ],
+  "font": {
+    "family": "IBM Plex Sans",
+    "license": "assets/fonts/OFL-IBMPlexSans.txt",
+    "source": "https://www.deeprsi.com/",
+    "embedded": "Local WOFF2 Latin, extended Latin and Greek subsets from fonts.css"
+  },
+  "evidence": [
+    {
+      "path": "docs/RESEARCH_SCOPE_AND_EVALUATION.md",
+      "supports": "Known support versus hidden queries; feedback isolation; missing values remain missing."
+    },
+    {
+      "path": "pipeline/zeroshot/SAMPLING.md",
+      "supports": "Assay-specific frozen query identity; ADMET official test-set exception."
+    },
+    {
+      "path": "pipeline/zeroshot/MONOMER_SCORING.md",
+      "supports": "Independent scoring, prediction integrity, signed Spearman, AUROC and complete coverage."
+    },
+    {
+      "path": "pipeline/zeroshot/ADMET_PROTOCOL.md",
+      "supports": "SMILES / computed 3D; official rows; standalone molecules distinct from protein–ligand effects."
+    },
+    {
+      "path": "experiments/fewshot_cumulative_order_gemini_seed42_20260928/README.md",
+      "supports": "Cumulative examples, fixed N250 query, no model training."
+    },
+    {
+      "path": "experiments/complex_fewshot_gemini_seed42_20260928/PLAN.md",
+      "supports": "Separate support/query, zero/few matched queries within a comparison, support in prompt only."
+    },
+    {
+      "path": "reports/fewshot_figure_refresh_20261001/README.md",
+      "supports": "Fixed-query and order-extrapolation protocols remain distinct; actual shots differ by assay."
+    },
+    {
+      "path": "reports/complex_data_catalog_20261001/README.md",
+      "supports": "Small-pool pilot support/query sizes are not N250 main results."
+    }
+  ],
+  "scope": "Method summary only; no model calls, data resampling, score changes or manuscript-publication claims.",
+  "presentation_update": "Task18: replaced the white model disc with open streamlines, retaining stage correspondence and playback. Added a global back-to-top arrow outside the homepage hero and removed the footer text link. No benchmark data or protocols changed.",
+  "presentation_updated_on": "2026-10-20",
+  "previous_diagram_sha256": {
+    "evaluation-workflow.svg": "9ffda737e8e9fcd66c7e1c636236fff8d4cf77707fdc4ae303e52040dec32df4",
+    "evaluation-workflow-mobile.svg": "10e86bc77023f1d9a5eebcfefd4fc4cc808e81145b900fea3149009a3cb9a3e7"
+  },
+  "generated_assets_sha256": {
+    "evaluation-workflow.svg": "89b26e1443500766b812c27c99a65c4550eb720e76f8cab3f8cc1589ce501de8",
+    "evaluation-workflow-mobile.svg": "3e62500fef0f5fcb7202fc08c0fe98b0378eeb6b37ceb0f203281bb0d2d07d7c"
+  },
+  "presentation_source_sha256": {
+    "tools/generate_method_diagram.py": "d0740a8097d0b69ee27ec9386d535012258cf01af1662746465dbd786fa56de9",
+    "method.js": "53e98015aa148e7d3563b5f712acbde2ad23e9609487f63f25f872432bcfe334",
+    "method.css": "c36e6cd3256fb47b0d68b493c42909199c6218ac5217f89463d25f9ab4b7b45a"
+  },
+  "caption_update": {
+    "task": 19,
+    "date": "2026-10-20",
+    "change": "Removed the small HTML caption at user request; SVG descriptions, schematic score label and protocol text retained."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "reference": "https://www.deeprsi.com/",
+  "stylesheet": "https://www.deeprsi.com/assets/theme-Bw64FpEW.css",
+  "verified_on": "2026-10-19",
+  "roles": {
+    "headings": "EB Garamond",
+    "body_navigation_tables_and_figure_labels": "IBM Plex Sans"
+  },
+  "assets": [
+    {
+      "file": "EBGaramond-latin.woff2",
+      "source": "https://www.deeprsi.com/assets/ebgaramond-normal-latin-DHJaSK_n.woff2",
+      "sha256": "68fd4b247dde89984ee835d99953d235e4927be2b1b732ad81173b519869cee8"
+    },
+    {
+      "file": "EBGaramond-latin-ext.woff2",
+      "source": "https://www.deeprsi.com/assets/ebgaramond-normal-latin-ext-CLnU8tfL.woff2",
+      "sha256": "c2fa6862b03629214873944b171b0df1189420be52aabd82142d45f96fdce588"
+    },
+    {
+      "file": "EBGaramond-greek.woff2",
+      "source": "https://www.deeprsi.com/assets/ebgaramond-normal-greek-uN-Wr6H0.woff2",
+      "sha256": "19e98f32f56c0f648cc511d29305b295f6f63a7cf1f1c72eb8516dd21e69a705"
+    },
+    {
+      "file": "IBMPlexSans-latin.woff2",
+      "source": "https://www.deeprsi.com/assets/ibmplexsans-normal-latin-BD64o3ke.woff2",
+      "sha256": "056e4e2459f57a0033c8c9c844ff19d6e42ac8602027803d4345823bcc939818"
+    },
+    {
+      "file": "IBMPlexSans-latin-ext.woff2",
+      "source": "https://www.deeprsi.com/assets/ibmplexsans-normal-latin-ext-KUPCjGsn.woff2",
+      "sha256": "ae1d854fefa1167a79071f1afe01d4d51b60c5840c1be36dd74bd5fe7375b405"
+    },
+    {
+      "file": "IBMPlexSans-greek.woff2",
+      "source": "https://www.deeprsi.com/assets/ibmplexsans-normal-greek-Cuw1d432.woff2",
+      "sha256": "a29d4e6345cdb7e2b6daabf4961a6dcafcbc7ed1eac26186ca4a004cd32d64d8"
+    }
+  ],
+  "licenses": {
+    "EB Garamond": "https://github.com/google/fonts/blob/main/ofl/ebgaramond/OFL.txt",
+    "IBM Plex Sans": "https://github.com/google/fonts/blob/main/ofl/ibmplexsans/OFL.txt"
+  },
+  "note": "DeepRSI loads IBM Plex Mono for code; this page has no code surface, so that family is not used. Montserrat files are retained for history but are not loaded."
+}

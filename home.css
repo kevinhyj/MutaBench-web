@@ -1,0 +1,150 @@
+/* Hero composition and ambient molecular motion for the single-page site. */
+.home-page {
+  --home-body-size: 1.0625rem;
+  --home-control-size: 1.125rem;
+  --home-copy: #526586;
+}
+
+.home-page .site-header {
+  height: 88px;
+  justify-content: flex-end;
+  width: min(1320px, calc(100% - 80px));
+}
+
+.home-page .brand {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -.03em;
+}
+
+.home-page .brand-accent { color: var(--home-copy); }
+
+
+.home-paper-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 16px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 6px;
+  transition: text-decoration-color .2s ease;
+}
+
+.home-paper-link:hover { text-decoration-color: var(--primary); }
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: calc(100svh - 88px);
+  padding: 104px 32px 144px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 45%, #fffcfa99, #fffcfa00 65%),
+    linear-gradient(180deg, var(--bg), transparent 18%, transparent 84%, var(--bg)),
+    linear-gradient(120deg, #728ab938 0%, #f5b5bf59 48%, #f5ddb566 100%);
+}
+
+.home-hero-content { position: relative; z-index: 1; width: min(100%, 1080px); }
+
+.molecular-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Quiet space around the title, without cropping the molecular structures. */
+  mask-image: radial-gradient(ellipse 44% 34% at 50% 48%, transparent 34%, #0008 78%, #000 112%);
+}
+
+.home-project-name {
+  margin: 0 0 28px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--home-copy);
+}
+
+.home-hero h1 {
+  margin: 0;
+  font-size: clamp(40px, 4.45vw, 66px);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -.015em;
+  text-wrap: balance;
+}
+
+.home-section-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 52px;
+}
+
+.home-section-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 12px 24px;
+  border: 1px solid #728ab94d;
+  border-radius: 999px;
+  font-size: var(--home-control-size);
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+
+.home-page a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.home-page ::selection { background: var(--pink); color: var(--ink); }
+
+.home-skip {
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  z-index: 10;
+  padding: 12px 20px;
+  transform: translateY(-180%);
+}
+.home-skip:focus { transform: none; }
+
+@media (max-width: 850px) {
+  .home-page .site-header { width: calc(100% - 48px); height: 80px; }
+  .home-hero { min-height: calc(100svh - 80px); padding: 88px 24px 112px; }
+  .home-title-break { display: none; }
+  .home-hero h1 { max-width: 680px; margin-inline: auto; }
+  .home-section-links { gap: 12px; max-width: 620px; margin-inline: auto; }
+  .home-section-links a { padding-inline: 22px; }
+}
+
+@media (max-width: 510px) {
+  .home-page .site-header { width: calc(100% - 40px); height: 76px; }
+  .home-page .brand { font-size: 20px; }
+  .home-paper-link { font-size: 15px; }
+  .home-hero { min-height: calc(100svh - 76px); padding: 64px 20px 88px; }
+  .home-project-name { font-size: 21px; margin-bottom: 24px; }
+  .home-hero h1 { font-size: clamp(34px, 8.8vw, 42px); line-height: 1.2; }
+  .home-section-links { max-width: 360px; gap: 12px; margin-top: 36px; }
+  .home-section-links a { font-size: 17px; min-height: 52px; padding: 12px 20px; }
+  .molecular-background { opacity: .9; mask-image: radial-gradient(ellipse 75% 31% at 50% 47%, transparent 40%, #0009 90%, #000 130%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page { scroll-behavior: auto; }
+  html:has(.home-page) { scroll-behavior: auto; }
+  .home-page a { transition: none; }
+}
+
+@media (max-width: 360px) {
+  .home-paper-link { font-size: 14px; white-space: nowrap; }
+}

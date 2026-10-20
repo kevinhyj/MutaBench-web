@@ -1,0 +1,12 @@
+model,modelKey,type,score,input,assays,kind,thinking,arm,protocol,rank
+Gemini 4 Argon,argon_high,General-purpose LLM,0.39548490965064736,Sequence + MSA + structure,28,llm,high,msa_prompt_structure,Zero-shot,1
+GPT 6.1 Sol,sol61_max,General-purpose LLM,0.3486970639661308,Sequence + MSA + structure,28,llm,max,msa_prompt_structure,Zero-shot,2
+Gemini 3.8 Flash,flash38_high,General-purpose LLM,0.26800102577359974,Sequence + MSA + structure,28,llm,high,msa_prompt_structure,Zero-shot,3
+Qwen 3.8 27B,qwen38_27b_high,General-purpose LLM,0.17824148191121303,Sequence + MSA,28,llm,high,msa_prompt,Zero-shot,4
+RNAErnie,RNAErnie,Sequence specialist,0.14837377960100184,Sequence,28,baseline,,baseline,Zero-shot,5
+Nucleotide Transformer,NT,Sequence specialist,0.14187530006880858,Sequence,28,baseline,,baseline,Zero-shot,6
+RNA-FM,RNA-FM,Sequence specialist,0.11973423744309011,Sequence,28,baseline,,baseline,Zero-shot,7
+Evo2,evo2,Sequence specialist,0.08013923427474928,Sequence,28,baseline,,baseline,Zero-shot,8
+RiNALMo,rinalmo,Sequence specialist,0.05970360496082607,Sequence,28,baseline,,baseline,Zero-shot,9
+Evo1.5,evo1.5,Sequence specialist,0.027527624776605388,Sequence,28,baseline,,baseline,Zero-shot,10
+Evo1,evo1,Sequence specialist,0.014318584673880204,Sequence,28,baseline,,baseline,Zero-shot,11

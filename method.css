@@ -1,0 +1,69 @@
+/* Four aligned stages share the same visual and reading order. */
+.method-workflow { margin: 0 0 24px; }
+.method-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.method-toolbar > p { font-family: var(--serif); font-size: 38px; line-height: 1.2; letter-spacing: -.02em; margin: 0; }
+.method-replay { display: inline-flex; align-items: center; gap: 9px; padding: 10px 16px; border: 1px solid #b9c5d9; border-radius: 24px; background: #fffdfb; color: var(--ink); font: 16px var(--sans); cursor: pointer; white-space: nowrap; }
+.method-replay[hidden] { display: none; }
+.method-replay:hover { background: #edf2f9; }
+.method-replay svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+.method-replay:focus-visible, .method-step-button:focus-visible { outline: 2px solid #526b99; outline-offset: 5px; }
+.method-diagram { display: block; width: 100%; height: auto; overflow: visible; }
+.method-diagram-mobile { display: none; }
+.method-stage { transition: opacity 220ms ease; }
+.method-workflow[data-focus] .method-stage { opacity: .8; }
+.method-workflow[data-focus="0"] [data-stage="0"], .method-workflow[data-focus="1"] [data-stage="1"], .method-workflow[data-focus="2"] [data-stage="2"], .method-workflow[data-focus="3"] [data-stage="3"] { opacity: 1; }
+.model-ribbon { transform-origin: 180px 236px; }
+.method-workflow[data-animation] .model-ribbon { animation: method-core-turn 7.2s cubic-bezier(.22, 1, .36, 1) both paused; }
+.method-workflow[data-playing] .model-ribbon { animation-play-state: running; }
+@keyframes method-core-turn {
+  0%, 38% { transform: rotate(0deg); }
+  62% { transform: rotate(16deg) scale(1.035); }
+  100% { transform: rotate(0deg); }
+}
+.method-particle { pointer-events: none; }
+.method-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; list-style: none; padding: 0; margin: 0 0 64px; }
+.method-steps li { padding-top: 21px; border-top: 2px solid #cbd4e4; transition: border-color 200ms ease; }
+.method-steps li:nth-child(2) { --step-color: #43998f; }
+.method-steps li:nth-child(3) { --step-color: #bc7c8a; }
+.method-steps li { --step-color: #637eae; }
+.method-steps li.is-selected { border-color: var(--step-color); }
+.method-steps h3 { font-size: 21px; line-height: 1.4; margin: 0 0 18px; min-height: 60px; letter-spacing: -.02em; }
+.method-step-button { display: flex; align-items: baseline; gap: 12px; text-align: left; padding: 0; border: 0; border-radius: 2px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.method-step-button:disabled { cursor: default; }
+.method-step-button span { color: var(--step-color); font-size: 17px; font-variant-numeric: tabular-nums; }
+.method-step-button:hover:not(:disabled) { color: var(--step-color); }
+.method-step-button[aria-pressed="true"] { color: var(--step-color); }
+.method-steps p { font-size: 17px; line-height: 1.8; max-width: 65ch; }
+.method-mode { color: var(--ink); font-weight: 500; }
+.method-protocol-details { margin-bottom: 100px; border-block: 1px solid #dfcfd2; }
+.method-protocol-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; list-style: none; cursor: pointer; font-size: 22px; }
+.method-protocol-details > summary::-webkit-details-marker { display: none; }
+.method-protocol-details > summary:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.method-protocol-details[open] .disclosure-icon { transform: rotate(180deg); }
+.method-protocol-body { display: grid; gap: 24px; max-width: 78ch; padding-bottom: 32px; }
+.method-protocol-body p { font-size: 18px; line-height: 1.8; }
+@media (min-width: 701px) and (max-width: 1100px) {
+  .method-diagram-desktop { min-width: 1040px; }
+  .method-workflow { overflow-x: auto; scrollbar-color: var(--primary) #f4edea; }
+  .method-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+  .method-steps h3 { min-height: 0; }
+}
+@media (max-width: 700px) {
+  .method-toolbar { align-items: flex-start; gap: 14px; }
+  .method-toolbar > p { font-size: 29px; max-width: 9ch; }
+  .method-replay { padding: 9px 12px; font-size: 14px; }
+  .method-diagram-desktop { display: none; }
+  .method-diagram-mobile { display: block; max-width: 540px; margin-inline: auto; }
+  .method-steps { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
+  .method-steps h3 { font-size: 23px; min-height: 0; margin-bottom: 14px; }
+  .method-protocol-details { margin-bottom: 72px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .method-stage, .method-steps li, .method-protocol-details .disclosure-icon { transition: none; }
+  .method-workflow .model-ribbon { animation: none; }
+}
+@media print {
+  .method-replay { display: none; }
+  .method-stage { opacity: 1 !important; }
+  .method-particle { display: none; }
+}

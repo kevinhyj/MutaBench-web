@@ -1,0 +1,41 @@
+{
+  "source": "frontend-wr/assets/molecular/task5/",
+  "adapted_on": "2026-10-20",
+  "scope": "Illustrative molecular artwork, not experimental coordinates.",
+  "palette": [
+    "#728AB9",
+    "#F5B5BF",
+    "#F5DDB5"
+  ],
+  "rendering": "Unmodified source PNGs. structure-palette.js adapts the reference WebGL color mapping to three hues, preserving light and alpha. Whole assemblies retain the existing CSS motion. Original PNG fallback when WebGL is unavailable.",
+  "assets": [
+    {
+      "file": "protein.png",
+      "sha256": "c7069083ae4acca7c3626a9e0b55dcfc326bf69ad34d1f5b2b5c5a09b6506c01"
+    },
+    {
+      "file": "rna.png",
+      "sha256": "8febfa2e4542972cd533bb0e8d1c3ceedefddf29d920e457b8812792f3ab9f4b"
+    },
+    {
+      "file": "protein-protein.png",
+      "sha256": "649c3690fe4c8235252a6f14edba09a5112fa8fbec4484f2bb4d6d364bf8b894"
+    },
+    {
+      "file": "protein-rna-v2.png",
+      "sha256": "39880c006e3914088fb83c09c3e80bacf57bbcc1d7bb86c80f5de62e59ebbbc9"
+    },
+    {
+      "file": "protein-dna.png",
+      "sha256": "b97fe12c027910e66c01f4673dbf98d86c3cb4c27a2dd0165e7210462a08ef18"
+    },
+    {
+      "file": "protein-ligand.png",
+      "sha256": "e34177ce99d9eb44b7d9f8d07cdd6123744541fb267c3914fe8cfb96c5847db5"
+    },
+    {
+      "file": "classification.png",
+      "sha256": "059e674953005664edcb7b666c4c393366b636f848315512b587ca38ff9139e8"
+    }
+  ]
+}
