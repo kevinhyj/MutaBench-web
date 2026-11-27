@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="fonts.css?v=0cfbb8a221e9" />
   <link rel="stylesheet" href="site.css?v=f4541c01c460" />
-  <link rel="stylesheet" href="home.css?v=7008977f04a5" />
+  <link rel="stylesheet" href="home.css?v=afdafa60ad1d" />
   <link rel="stylesheet" href="dataset-structures.css?v=8957c007b747" />
   <link rel="stylesheet" href="intro.css?v=8f66a2476dc7" />
   <link rel="stylesheet" href="method.css?v=9451ef13eda0" />
@@ -25,7 +25,12 @@
 <body class="home-page" id="top">
   <a class="home-skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="home-paper-link" href="#intro">About MutaBench</a>
+    <nav class="project-links" aria-label="Project resources">
+      <a class="home-paper-link" href="#intro">About</a>
+      <a class="home-paper-link" href="https://github.com/kevinhyj/MutaBench-web">GitHub</a>
+      <a class="home-paper-link" href="https://huggingface.co/datasets/yanjiehuang/MutaBench">Hugging Face</a>
+      <!-- Add the paper link here when published. -->
+    </nav>
   </header>
 
   <main id="main">
@@ -313,7 +318,10 @@
   </main>
   <footer class="site-footer page-width">
     <a class="brand" href="#top" aria-label="Back to MutaBench home"><span>MutaBench</span></a>
-    <div><a href="assets/papers/EVAgent_NM_Brief.pdf">Manuscript draft</a></div>
+    <div>
+      <a href="https://github.com/kevinhyj/MutaBench">Evaluation code (private)</a>
+      <a href="https://github.com/kevinhyj/MutaBench-web/blob/main/CONTRIBUTING.md">Contribute a dataset</a>
+    </div>
   </footer>
   <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top" hidden>
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>

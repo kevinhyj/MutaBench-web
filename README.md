@@ -2,7 +2,10 @@
 
 Explore datasets, model comparisons and evaluation methods for molecular prediction.
 
-[Live website](https://kevinhyj.github.io/MutaBench-web/) · [Contribute a dataset](https://github.com/kevinhyj/MutaBench-web/blob/main/CONTRIBUTING.md) · [Full-size website preview](assets/web/homepage.png)
+[Website & leaderboard](https://kevinhyj.github.io/MutaBench-web/) · [Dataset on Hugging Face](https://huggingface.co/datasets/yanjiehuang/MutaBench) · [Contribute a dataset](https://github.com/kevinhyj/MutaBench-web/blob/main/CONTRIBUTING.md)
+<!-- Add the paper link here when published. -->
+
+The [evaluation code](https://github.com/kevinhyj/MutaBench) is available to repository collaborators.
 
 [![MutaBench website showing datasets, results and evaluation methods](assets/web/homepage.png)](assets/web/homepage.png)
 

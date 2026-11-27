@@ -20,6 +20,8 @@
 .home-page .brand-accent { color: var(--home-copy); }
 
 
+.project-links { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(16px, 3vw, 32px); }
+
 .home-paper-link {
   display: inline-flex;
   align-items: center;
