@@ -53,7 +53,7 @@ svg { display: block; }
 }
 .nav-label-short { display: none; }
 .page-part {
-  padding-block: 132px;
+  padding-block: 80px;
   scroll-margin-top: 0;
   /* Fade back to cream at section boundaries so the page reads as one surface. */
   background:
@@ -61,10 +61,10 @@ svg { display: block; }
     var(--section-wash, var(--wash-balanced));
 }
 .intro-part { padding-top: 104px; padding-bottom: 148px; }
-.part-heading { margin-bottom: 64px; }
+.part-heading { margin-bottom: 36px; }
 .part-heading h2, .part-subtitle { font-size: clamp(32px, 3vw, 44px); line-height: 1.22; letter-spacing: -.03em; font-weight: 400; text-wrap: balance; }
 .part-subtitle { margin-top: 8px; }
-.part-description { max-width: 760px; margin-top: 28px; font-size: 19px; line-height: 1.75; }
+.part-description { max-width: 760px; margin-top: 18px; font-size: 19px; line-height: 1.75; }
 .intro-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px; }
 .intro-icon { display: grid; place-items: center; width: 88px; height: 88px; margin-bottom: 32px; border-radius: 16px; }
 .intro-icon svg { width: 48px; height: 48px; fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
@@ -77,11 +77,6 @@ svg { display: block; }
 .intro-columns p { font-size: 18px; line-height: 1.75; }
 .datasets-part { --section-wash: var(--wash-gold); }
 .results-part { --section-wash: var(--wash-blue); }
-.evaluation-tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; margin-bottom: 72px; }
-.evaluation-tracks article { max-width: 500px; }
-.evaluation-tracks h3 { display: inline-block; margin-bottom: 16px; padding: 7px 16px; border-radius: 999px; font-size: 21px; line-height: 1.5; background: #728ab926; }
-.evaluation-tracks article:nth-child(2) h3 { background: #f5b5bf66; }
-.evaluation-tracks p { font-size: 18px; }
 .dataset-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 72px; }
 .dataset-card { padding-top: 28px; border-top: 1px solid #d8cfbf; min-width: 0; }
 .dataset-card-head { display: flex; align-items: start; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
@@ -95,7 +90,7 @@ svg { display: block; }
 .dataset-meta b { font-weight: 500; color: var(--ink); }
 .dataset-card-admet { grid-column: 1 / -1; }
 .dataset-card-admet p { max-width: 900px; }
-.result-block + .result-block { margin-top: 88px; }
+.result-block + .result-block { margin-top: 32px; }
 .result-block h3, .task-list > h3 { margin-bottom: 32px; font-size: 30px; line-height: 1.3; letter-spacing: -.025em; }
 .figure-scroll { overflow-x: auto; background: #fff; scrollbar-color: var(--primary) #f4edea; }
 .figure-scroll img { display: block; width: 100%; min-width: 1060px; height: auto; max-width: none; }
@@ -162,8 +157,6 @@ td b { font-weight: 500; }
   .intro-columns article { max-width: 540px; }
   .intro-icon { width: 76px; height: 76px; margin-bottom: 24px; }
   .intro-columns h3 { font-size: 23px; }
-  .evaluation-tracks { gap: 32px; margin-bottom: 56px; }
-  .evaluation-tracks h3 { font-size: 20px; }
   .dataset-card h3 { font-size: 24px; }
   .result-block h3, .task-list > h3 { font-size: 27px; }
   .result-block + .result-block { margin-top: 64px; }
@@ -178,7 +171,6 @@ td b { font-weight: 500; }
   .site-footer { padding-block: 40px; flex-direction: column; align-items: flex-start; gap: 24px; }
 }
 @media (max-width: 420px) {
-  .evaluation-tracks { grid-template-columns: 1fr; gap: 28px; }
   .task-specs { grid-template-columns: 1fr; }
   .board-tabs button { font-size: 16px; padding-inline: 16px; }
 }
@@ -231,4 +223,53 @@ td b { font-weight: 500; }
 }
 @media print {
   .back-to-top { display: none; }
+}
+
+/* Compact desktop reading rhythm, leaving more of each figure in view. */
+@media (min-width: 701px) {
+  html { scroll-padding-top: 84px; }
+  .section-navigation { padding-block: 8px; }
+  .section-navigation-inner { padding: 4px; }
+  .results-part { padding-top: 28px; }
+}
+
+/* A shared section rhythm keeps the introduction, atlas, scores and method
+   at the same typographic scale, while each figure retains its own layout. */
+@media (min-width: 1100px) {
+  :root {
+    --section-top: 40px;
+    --section-bottom: 76px;
+    --section-heading-gap: 24px;
+    --section-title-size: 20px;
+    --section-name-size: 42px;
+  }
+  .home-page .page-part { padding-block: var(--section-top) var(--section-bottom); }
+  .home-page .page-part .part-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); column-gap: 48px; align-items: center; margin-bottom: var(--section-heading-gap); }
+  .home-page .page-part .part-heading h2 { font: 500 var(--section-name-size)/1.12 var(--serif); letter-spacing: -.025em; }
+  .home-page .page-part .part-heading .part-subtitle { grid-column: 1; font: 400 var(--section-title-size)/1.45 var(--sans); letter-spacing: 0; margin-top: 8px; color: var(--muted); text-wrap: initial; }
+  .home-page .page-part .part-heading .part-description { grid-column: 2; margin: 0; font-size: 16px; line-height: 1.55; max-width: 60ch; }
+}
+@media (min-width: 1100px) and (max-height: 760px) {
+  :root { --section-top: 28px; --section-heading-gap: 18px; --section-name-size: 38px; }
+}
+@media (min-width: 1100px) and (max-height: 680px) {
+  :root { --section-top: 16px; --section-heading-gap: 12px; --section-title-size: 19px; --section-name-size: 34px; }
+  .home-page .page-part .part-heading .part-description { font-size: 15px; }
+}
+
+/* Section boundaries belong between chapters, outside the chart's reading area. */
+.home-page .page-part + .page-part { position: relative; margin-top: 24px; }
+.home-page .page-part + .page-part::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100% - 112px)); border-top: 1px solid #bbc7d9; }
+@media (max-width: 1099px) {
+  .home-page .page-part .part-heading h2 { font: 500 38px/1.15 var(--serif); letter-spacing: -.025em; }
+  .home-page .page-part .part-heading .part-subtitle { font: 400 22px/1.45 var(--sans); letter-spacing: 0; margin-top: 10px; color: var(--muted); text-wrap: initial; }
+}
+@media (max-width: 1000px) {
+  .home-page .page-part + .page-part::before { width: calc(100% - 64px); }
+}
+@media (max-width: 700px) {
+  .home-page .page-part + .page-part { margin-top: 12px; }
+  .home-page .page-part + .page-part::before { width: calc(100% - 40px); }
+  .home-page .page-part .part-heading h2 { font-size: 34px; }
+  .home-page .page-part .part-heading .part-subtitle { font-size: 21px; }
 }

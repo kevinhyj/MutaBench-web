@@ -1,0 +1,92 @@
+{
+  "verified_on": "2026-10-21",
+  "scope": "Few-shot input labels only; scores, ranks, cohorts and models unchanged. No model calls or query-label reads.",
+  "models": {
+    "sol_max": {
+      "input": "Sequence + available MSA / structure",
+      "source_condition": "available_MSA_structure",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    },
+    "argon_high": {
+      "input": "Sequence + available MSA / structure",
+      "source_condition": "available_MSA_structure",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    },
+    "deepseek_max": {
+      "input": "Sequence + available MSA / structure",
+      "source_condition": "available_MSA_structure",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    },
+    "qwen_27b": {
+      "input": "Sequence + available MSA / structure",
+      "source_condition": "available_MSA_structure",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    },
+    "Gemini_evidence": {
+      "input": "Sequence + available MSA / structure",
+      "source_condition": "available_MSA_structure",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    },
+    "Gemini_plain": {
+      "input": "Sequence",
+      "source_condition": "no_added_MSA_structure_prompt",
+      "domains": [
+        "protein",
+        "rna",
+        "ppi"
+      ],
+      "support_max_orders": [
+        1,
+        2
+      ]
+    }
+  },
+  "sources": {
+    "reports/fewshot_figure_refresh_20261001/llm_appended_fixedwidth_nostar_20261016_v4/SUMMARY.csv": "c21136d0f9c07d6273a0809b1785e75c32b07c82f882fc02be70582abaa1728c",
+    "reports/fewshot_figure_refresh_20261001/llm_appended_fixedwidth_nostar_20261016_v4/scripts/build.py": "25a1b42716c9b1f070f3de3283785da4412a7705b3575c695335b7efcf12b04f",
+    "reports/fewshot_figures_refresh_20261016_v8/fig2_llm_first_paired_v4/SUMMARY_evidence_only.csv": "daef0ba4b419a3f93c95f3027372bdd92722df75d9faa336a2654a2e8776d7ff",
+    "reports/fewshot_figures_refresh_20261016_v8/scripts/refresh_metrics.py": "e4770468da2992b82a9d6b0289a2aaf0978096982d1d40b72a7d28309ccebc77",
+    "reports/five_model_fewshot_assay_comparison_20261015_v2/README.md": "92b70b27b529f830f972c280fabefb9f8f9355dc2399adbdf3710a2f484ca1db"
+  },
+  "interpretation": "Available evidence means MSA and structure when available; not all RNA assays have natural MSA. Evidence-family identification does not establish identical compute budgets or independently verify the figure-estimated scores."
+}

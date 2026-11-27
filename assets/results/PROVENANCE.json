@@ -1,6 +1,6 @@
 {
   "verified_on": "2026-10-20",
-  "method": "Saved matched-cohort metrics; no inference or query-label reads. Rankings use unrounded scores. Protocol families remain separate.",
+  "method": "Saved evaluation metrics; ranks use unrounded means, display uses three decimals (percent metrics: one decimal). Few-shot RF views include exact matched-cohort Fig2 LLM means. No figure estimates remain in current rows. No inference or query-label reads.",
   "sources": {
     "protein": {
       "directory": "pipeline/fig/final/single_chain/protein/data_best_arm_n17_20261018_v1",
@@ -285,5 +285,47 @@
   "few_baseline_preservation_audit": {
     "path": "reports/fewshot_figure_refresh_20261001/llm_appended_fixedwidth_nostar_20261016_v4/VALIDATION.json",
     "sha256": "390ac88815d750cef0c2568be7b2d2f8f1bd0d246b639ed5ae969a8330ac72ab"
+  },
+  "input_audit": {
+    "path": "assets/results/INPUT_PROVENANCE.json",
+    "sha256": "a76d66c771e63e3e2a276476beae583783c9443bfe807e938aa545c550f13800",
+    "models": [
+      "sol_max",
+      "argon_high",
+      "deepseek_max",
+      "qwen_27b",
+      "Gemini_evidence",
+      "Gemini_plain"
+    ],
+    "verified_on": "2026-10-21"
+  },
+  "historical_figure_estimates": {
+    "imported_on": "2026-10-21",
+    "source": "ranking.md",
+    "published_source": "assets/results/ranking.md",
+    "sha256": "f304d0233c5a28112575a3a20cd8c823c70e8d31c6b104a1a2e4cced7d1a5454",
+    "boards": {
+      "few-protein-rf-1": 4,
+      "few-protein-rf-2": 4,
+      "few-rna-rf-1": 4,
+      "few-rna-rf-2": 4,
+      "few-ppi-rf-1": 4,
+      "few-ppi-rf-2": 4
+    },
+    "row_count": 24,
+    "method": "Add missing LLM rows to the six existing Few-shot RF views. Preserve all existing model names and scores; do not replace Flash variants or RF scores. Retain the original 43 views with no additional levels. Added row estimates display three decimals without symbols; precision and source are recorded in data metadata and audit documentation. No independent Source Data or matching-query verification of added rows.",
+    "status": "Superseded by exact Fig2 metrics; not used by current leaderboards."
+  },
+  "fewshot_exact": {
+    "path": "assets/results/FEWSHOT_EXACT_PROVENANCE.json",
+    "sha256": "ec79e2a07a5cc04e2ea6b2cdbb856ca451ad2586e083d55808e865c74be81bdb",
+    "source_directory": "reports/fewshot_figures_complete_20261017_v9",
+    "imported_means": 24,
+    "assays": {
+      "protein": 64,
+      "rna": 27,
+      "ppi": 14
+    },
+    "verified_on": "2026-10-21"
   }
 }

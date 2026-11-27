@@ -53,3 +53,70 @@
   .performance-plot { grid-column: 2; grid-row: 2; }
 }
 @media (prefers-reduced-motion: reduce) { .performance-row { transition: none; } }
+
+/* On desktop, filters sit beside the comparison instead of above every bar.
+   Blue/pink still encode model families; whitespace, not data, is reduced. */
+@media (min-width: 1100px) {
+  .results-part .part-heading h2 { font: 400 18px/1.4 var(--sans); letter-spacing: 0; }
+  .results-bars { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 32px; align-items: start; }
+  .performance-controls { min-width: 0; padding-right: 24px; border-right: 1px solid #ccd4e2; }
+  .evaluation-modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-bottom: 14px; padding-bottom: 14px; }
+  .evaluation-modes button { padding: 7px 6px; min-height: 38px; font-size: 15px; line-height: 1.35; border-radius: 6px; }
+  .performance-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-bottom: 16px; }
+  .performance-tabs button { padding: 7px 8px; min-height: 36px; font-size: 14px; line-height: 1.35; border-radius: 6px; }
+  .performance-condition { display: grid; gap: 6px; margin-bottom: 14px; font-size: 14px; line-height: 1.5; }
+  .performance-condition[hidden] { display: none; }
+  .performance-condition select { width: 100%; min-width: 0; min-height: 38px; padding: 7px 24px 7px 8px; font-size: 14px; }
+  .performance-summary { font-size: 14px; line-height: 1.65; margin-bottom: 0; }
+  .performance-chart { --rank-width: 22px; --model-width: 188px; --score-space: 68px; --row-gap: 14px; min-width: 0; }
+  .performance-context { display: grid; gap: 6px; margin-bottom: 12px; font-size: 14px; line-height: 1.5; }
+  .performance-legend { gap: 8px 18px; }
+  .performance-legend li { gap: 7px; }
+  .performance-swatch { width: 18px; height: 9px; }
+  .performance-columns { padding-bottom: 8px; font-size: 14px; }
+  .performance-column-model { align-self: end; }
+  .performance-axis-label { margin-bottom: 3px; font-size: 14px; line-height: 1.5; }
+  .performance-axis-range { font-size: 13px; line-height: 1.5; }
+  .performance-row { min-height: clamp(34px, 4.8vh, 42px); padding-block: 5px; }
+  .performance-rank { font-size: 14px; }
+  .performance-model { font-size: 16px; line-height: 1.35; }
+  .performance-track { height: 24px; }
+  .performance-bar { top: 5px; height: 14px; }
+  .performance-score { margin-left: 10px; font-size: 16px; line-height: 24px; }
+  .results-part .model-comparison { margin-top: 24px; }
+  .results-part .model-comparison > summary { padding-block: 16px; font-size: 18px; }
+}
+@media (min-width: 1100px) and (max-height: 760px) {
+  .performance-row { min-height: 34px; padding-block: 4px; }
+}
+@media (min-width: 1100px) and (max-height: 680px) {
+  .performance-context { gap: 4px; margin-bottom: 8px; font-size: 13px; line-height: 1.4; }
+  .performance-columns { padding-bottom: 6px; }
+  .performance-row { min-height: 32px; padding-block: 2px; }
+}
+@media (min-width: 701px) and (max-width: 1099px) {
+  .results-part .part-heading { margin-bottom: 28px; }
+  .evaluation-modes { margin-bottom: 16px; padding-bottom: 16px; }
+  .evaluation-modes button { min-height: 44px; font-size: 18px; padding: 8px 16px; }
+  .performance-tabs, .performance-condition { margin-bottom: 18px; }
+  .performance-summary { font-size: 17px; margin-bottom: 24px; }
+  .performance-context { margin-bottom: 18px; font-size: 16px; }
+  .performance-row { min-height: 48px; padding-block: 10px; }
+  .performance-model, .performance-score { font-size: 18px; }
+}
+
+/* Keep both saved Flash input names on one line in supplemented views. */
+@media (min-width: 1100px) {
+  .performance-chart[data-wide-models="true"] { --model-width: 224px; }
+}
+
+/* Twelve rows retain legible type and fit the same desktop Results viewport. */
+@media (min-width: 1100px) {
+  .performance-chart[data-row-count="12"] .performance-row { min-height: clamp(28px, 4.4vh, 38px); padding-block: 3px; }
+}
+@media (min-width: 1100px) and (max-height: 760px) {
+  .performance-chart[data-row-count="12"] .performance-row { min-height: 32px; }
+}
+@media (min-width: 1100px) and (max-height: 680px) {
+  .performance-chart[data-row-count="12"] .performance-row { min-height: 28px; padding-block: 2px; }
+}

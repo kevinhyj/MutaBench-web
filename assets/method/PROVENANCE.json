@@ -65,17 +65,30 @@
     "evaluation-workflow-mobile.svg": "10e86bc77023f1d9a5eebcfefd4fc4cc808e81145b900fea3149009a3cb9a3e7"
   },
   "generated_assets_sha256": {
-    "evaluation-workflow.svg": "89b26e1443500766b812c27c99a65c4550eb720e76f8cab3f8cc1589ce501de8",
-    "evaluation-workflow-mobile.svg": "3e62500fef0f5fcb7202fc08c0fe98b0378eeb6b37ceb0f203281bb0d2d07d7c"
+    "evaluation-workflow.svg": "709b67b519e24c5588bdf8abb0825f244fb6496cb9a0272c2c6818a75e4818f1",
+    "evaluation-workflow-mobile.svg": "291b37ec4b772a77ea1723ed266d45f3dfc8c033db32a9d28469ae13e2cd5b05"
   },
   "presentation_source_sha256": {
-    "tools/generate_method_diagram.py": "d0740a8097d0b69ee27ec9386d535012258cf01af1662746465dbd786fa56de9",
-    "method.js": "53e98015aa148e7d3563b5f712acbde2ad23e9609487f63f25f872432bcfe334",
-    "method.css": "c36e6cd3256fb47b0d68b493c42909199c6218ac5217f89463d25f9ab4b7b45a"
+    "tools/generate_method_diagram.py": "62da58dc91eb97165734194d46c4c5006c10d0caafc230d0ad5d7dd2b4b19bd7",
+    "method.js": "9e1de50151af729693b301751baaa1759df13b74fb65259feea36489166c53f0",
+    "method.css": "9451ef13eda08fdedae4233a7caed1d75bc64012cf5b59e9287f69350c9db12f"
   },
   "caption_update": {
     "task": 19,
     "date": "2026-10-20",
     "change": "Removed the small HTML caption at user request; SVG descriptions, schematic score label and protocol text retained."
+  },
+  "layout_update": {
+    "task": 23,
+    "date": "2026-10-21",
+    "change": "Reduced desktop gaps beneath method steps and protocol details. Diagram, content, motion and protocol unchanged."
+  },
+  "task24_update": {
+    "date": "2026-10-21",
+    "change": "Removed the bottom held-out measurement label, lock, gold bypass and associated particle branch at user request; resized desktop/mobile diagrams to 1440x460 and 480x1870. Unified section spacing and heading scale. Four stages and explanatory protocol content retained.",
+    "previous_assets_sha256": {
+      "evaluation-workflow.svg": "89b26e1443500766b812c27c99a65c4550eb720e76f8cab3f8cc1589ce501de8",
+      "evaluation-workflow-mobile.svg": "3e62500fef0f5fcb7202fc08c0fe98b0378eeb6b37ceb0f203281bb0d2d07d7c"
+    }
   }
 }

@@ -67,3 +67,16 @@
   .method-stage { opacity: 1 !important; }
   .method-particle { display: none; }
 }
+
+@media (min-width: 701px) {
+  .method-steps { margin-bottom: 40px; }
+  .method-protocol-details { margin-bottom: 32px; }
+}
+
+@media (min-width: 1100px) {
+  .method-toolbar { margin-bottom: 20px; }
+  .method-toolbar > p { font-size: 28px; }
+  .method-steps p, .method-protocol-body p { font-size: 17px; line-height: 1.7; }
+  .method-protocol-body { gap: 20px; }
+  .method-protocol-details { margin-bottom: 0; }
+}

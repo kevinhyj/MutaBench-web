@@ -10,7 +10,7 @@
   const duration = 7200;
   const routes = [...figure.querySelectorAll('.method-route')].map(path => {
     const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    dot.setAttribute('r', '5'); dot.setAttribute('fill', path.classList.contains('method-label-route') ? '#b89460' : '#728ab9');
+    dot.setAttribute('r', '5'); dot.setAttribute('fill', '#728ab9');
     dot.setAttribute('class', 'method-particle'); dot.setAttribute('aria-hidden', 'true');
     dot.style.opacity = '0'; path.parentNode.append(dot);
     return {path, dot, length: path.getTotalLength()};
@@ -39,8 +39,8 @@
     select(Math.min(3, Math.floor(elapsed / 1800)));
     routes.forEach(({path, dot, length}) => {
       const source = path.dataset.source;
-      const begin = source === 'labels' ? 5100 : Number(source) * 1800 + 650;
-      const travel = source === 'labels' ? 1650 : 1050;
+      const begin = Number(source) * 1800 + 650;
+      const travel = 1050;
       const fraction = (elapsed - begin) / travel;
       dot.style.opacity = fraction >= 0 && fraction <= 1 ? '1' : '0';
       if (fraction >= 0 && fraction <= 1) {

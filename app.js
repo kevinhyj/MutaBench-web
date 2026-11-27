@@ -15,7 +15,7 @@ function renderBoard(view = 'protein') {
     const tr = document.createElement('tr');
     tr.dataset.kind = row.kind;
     const cells = [
-      ['rank', String(row.rank)],
+      ['rank', `${board.expandedModelList && board.rows.filter(r => r.rank === row.rank).length > 1 ? '=' : ''}${row.rank}`],
       ['model-cell', row.model],
       ['model-type', row.type],
       ['score', board.percent ? `${row.score.toFixed(1)}%` : row.score.toFixed(3)],
@@ -31,6 +31,7 @@ function renderBoard(view = 'protein') {
   }));
   document.getElementById('leaderboard-summary').textContent = board.summary;
   document.getElementById('leaderboard-score-heading').textContent = board.metric;
+  document.querySelector('#model-table caption').textContent = `${board.label}: ${board.variantLabel || board.group}. Models ranked by ${board.metric}.`;
   document.getElementById('leaderboard-input-heading').textContent = board.group === 'zero' ? 'Input (Best Performance)' : 'Input';
   groups.forEach(button => {
     const selected = button.dataset.resultGroup === board.group;
@@ -62,7 +63,8 @@ function renderBoard(view = 'protein') {
   const variants = siblings.filter(([,item]) => item.task === board.task);
   document.getElementById('performance-condition').hidden = variants.length < 2;
   document.querySelector('label[for="performance-variant"]').textContent = board.group === 'multi' ? 'Evaluation round' : 'Comparison & support';
-  variantChoice.replaceChildren(...variants.map(([key,item]) => new Option(item.variantLabel || item.label,key,false,key === view)));
+  const option = ([key,item]) => new Option(item.variantLabel || item.label,key,false,key === view);
+  variantChoice.replaceChildren(...variants.map(option));
   document.getElementById('model-table')?.setAttribute('aria-label', `${board.label}, ${board.variantLabel || board.group}, model comparison`);
   document.dispatchEvent(new CustomEvent('mutabench:board-change', {detail: {view}}));
 }
@@ -84,7 +86,6 @@ variantChoice?.addEventListener('change', () => renderBoard(variantChoice.value)
   });
 });
 renderBoard();
-
 // All section entry points share one selected state. Native links retain history
 // and deep-link behavior; a clicked destination stays highlighted during scrolling.
 const sectionLinks = [...document.querySelectorAll('.section-navigation a, .home-section-links a')];

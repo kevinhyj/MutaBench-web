@@ -1,0 +1,31 @@
+{
+  "verified_on": "2026-10-21",
+  "source_directory": "reports/fewshot_figures_complete_20261017_v9",
+  "snapshot": "assets/results/fewshot-llm-exact.csv",
+  "snapshot_sha256": "e00dd5ca582233f6b45f2b1a11c2b9a5aec02ecf3b5223dd125542d7e3245636",
+  "sources": {
+    "reports/fewshot_figures_complete_20261017_v9/fig2/SUMMARY.csv": "d9ff27751ebde8bf9c42c601542665614ea2466d3cd912bbb8622cc6e4d72ca8",
+    "reports/fewshot_figures_complete_20261017_v9/SourceData_Fig2.csv": "de15e16591c54be92dbb73202ab71b63447432d7510a43981c18b155de573683",
+    "reports/fewshot_figures_complete_20261017_v9/FINAL_VALIDATION.json": "e325bf609838386ac2d035ea3b57cc446292b3b6d40da851d42a461bfed38689",
+    "reports/fewshot_figure_refresh_20261001/organized_20261008/data/PLOT_DATA.csv": "e70ecd3f4760fb89f96bfbb104bf87ab9d710a9c9971a418d1600c075cf30895",
+    "reports/fewshot_figures_complete_20261017_v9/data/EVALUATION_VALIDATION.json": "da91e71c0adb32838a58ad262673aa33df7e7fd7988c077a33e4d7ef8ecc0f75"
+  },
+  "assays": {
+    "protein": 64,
+    "rna": 27,
+    "ppi": 14
+  },
+  "query_n": 250,
+  "imported_means": 24,
+  "verified_summary_means": 62,
+  "source_assay_metric_rows": 2154,
+  "checks": [
+    "All figure means equal arithmetic means of saved signed assay Spearman within 1e-12.",
+    "All displayed methods share assay sets, query hashes and support counts within each setting.",
+    "Original RF comparison, including both Flash input variants, shares these query hashes and support counts.",
+    "Both support orders share the same query identity per assay."
+  ],
+  "method": "Exact saved floating-point means; browser rounds to three decimals and ranks by unrounded values.",
+  "scope": "Reads aggregate and per-assay accuracy metrics only. No inference, prediction files or query labels read.",
+  "limitations": "Thinking budgets and historical providers differ; matching data does not imply equal compute."
+}

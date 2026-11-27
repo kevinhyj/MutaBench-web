@@ -1,19 +1,17 @@
 # MutaBench
 
-A benchmark for understanding mutation effects across molecular systems.
+Explore datasets, model comparisons and evaluation methods for molecular prediction.
 
-**Website:** https://kevinhyj.github.io/MutaBench/
+[Benchmark code](https://github.com/kevinhyj/MutaBench) · [Contribute a dataset](https://github.com/kevinhyj/MutaBench/blob/community-datasets/CONTRIBUTING.md) · [Full-size website preview](assets/web/homepage.png)
 
-This repository contains the static MutaBench website, including its datasets, results, interactive illustrations, and evaluation methods.
+[![MutaBench website showing datasets, results and evaluation methods](assets/web/homepage.png)](assets/web/homepage.png)
 
-## Preview locally
+## Interactive preview
+
+Run this command from the repository root and open [the local website](http://127.0.0.1:8000/).
 
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:8000/.
-
-## Publish updates
-
-GitHub Pages publishes the repository root on the `main` branch. Push site changes to `main` to update the website. Keep asset links relative so they work under `/MutaBench/`.
+In Results, choose an evaluation setting, task and condition to see the matching chart and score table.
