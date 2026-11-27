@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="site.css?v=f4541c01c460" />
   <link rel="stylesheet" href="home.css?v=afdafa60ad1d" />
   <link rel="stylesheet" href="dataset-structures.css?v=8957c007b747" />
-  <link rel="stylesheet" href="intro.css?v=41c568ab85bd" />
+  <link rel="stylesheet" href="intro.css?v=41843aa90ad2" />
   <link rel="stylesheet" href="method.css?v=9451ef13eda0" />
   <script src="molecular-background.js?v=a17ddd9b49c7" defer></script>
   <script src="assets/results/leaderboards.js?v=802b40bc9dd8" defer></script>
@@ -61,7 +61,7 @@
         <header class="part-heading intro-heading">
           <div class="part-heading-title">
             <h2 id="intro-title">What is MutaBench?</h2>
-            <p class="part-subtitle">How well do general-purpose AI models and models trained on biological data predict the effects of mutations? MutaBench checks their predictions against real lab measurements.</p>
+            <p class="part-subtitle">MutaBench compares general-purpose language models and biological foundation models on mutation prediction using real lab measurements.</p>
           </div>
         </header>
         <figure class="benchmark-diagram" aria-labelledby="benchmark-example">
@@ -95,19 +95,18 @@
             </div>
             <div class="benchmark-connector benchmark-merge" aria-hidden="true"><span></span></div>
             <div class="benchmark-card benchmark-lab">
-              <h3>Both predictions are checked against lab measurements</h3>
+              <h3>Check against the lab</h3>
               <p class="benchmark-value"><span>Measured activity</span> <strong>60%</strong></p>
             </div>
           </div>
         </figure>
         <div class="benchmark-results">
-          <p>See how the two model families perform across tasks.</p>
           <a class="benchmark-results-link" href="#results">Compare model results <span aria-hidden="true">↓</span></a>
         </div>
         <section class="benchmark-settings" aria-labelledby="benchmark-settings-title">
           <header class="benchmark-settings-heading">
             <h3 id="benchmark-settings-title">How we test the models</h3>
-            <p>Illustrative protein activity as a percentage of the original.</p>
+            <p>Illustrative activity values</p>
           </header>
           <div class="benchmark-settings-grid">
             <article class="benchmark-setting benchmark-setting-zero">
@@ -117,7 +116,6 @@
                 <span class="benchmark-variant-name"><span class="benchmark-variant-mark" aria-hidden="true"><i></i><i class="is-changed"></i><i></i><i class="is-changed"></i></span>Variant A</span>
                 <span class="benchmark-variant-action">Predict activity <b aria-hidden="true">?</b></span>
               </div>
-              <p class="benchmark-setting-note">The model sees the variant and the task.</p>
             </article>
             <article class="benchmark-setting benchmark-setting-few">
               <h4>Few-shot</h4>
@@ -126,7 +124,7 @@
                 <span class="benchmark-variant-name"><span class="benchmark-variant-mark" aria-hidden="true"><i></i><i class="is-changed"></i><i></i><i class="is-changed"></i></span>Variant A</span>
                 <span class="benchmark-variant-action">Predict activity <b aria-hidden="true">?</b></span>
               </div>
-              <p class="benchmark-example-label">Given from the same experiment</p>
+              <p class="benchmark-example-label">Given up front from the same experiment</p>
               <ul class="benchmark-examples" role="list">
                 <li class="benchmark-variant">
                   <span class="benchmark-variant-name"><span class="benchmark-variant-mark" aria-hidden="true"><i></i><i></i><i class="is-changed"></i><i></i></span>Variant B</span>
@@ -140,80 +138,69 @@
             </article>
             <article class="benchmark-setting benchmark-setting-multi">
               <h4>Multi-round</h4>
-              <p class="benchmark-setting-summary">Use lab feedback to guide the next pick.</p>
-              <ol class="benchmark-rounds" role="list">
-                <li>
-                  <p>Round 1 <span>· Model picks B</span></p>
-                  <div class="benchmark-variant">
-                    <span class="benchmark-variant-name"><span class="benchmark-variant-mark" aria-hidden="true"><i></i><i></i><i class="is-changed"></i><i></i></span>Variant B</span>
-                    <span class="benchmark-variant-action">Lab reveals <strong class="benchmark-measurement">45%</strong></span>
-                  </div>
-                </li>
-                <li>
-                  <p>Round 2 <span>· Model uses B’s result</span></p>
-                  <div class="benchmark-variant benchmark-target">
-                    <span class="benchmark-variant-name"><span class="benchmark-variant-mark" aria-hidden="true"><i></i><i></i><i></i><i class="is-changed"></i></span>Variant C</span>
-                    <span class="benchmark-variant-action">Next pick</span>
-                  </div>
-                </li>
+              <p class="benchmark-setting-summary">Each pick’s lab result guides the next round.</p>
+              <div class="benchmark-round-labels" aria-hidden="true"><span>Model pick</span><span>Lab result</span></div>
+              <ol class="benchmark-rounds" role="list" aria-label="Rounds showing the model’s pick and its lab result">
+                <li><span>Round 1</span> <strong>Variant B</strong> <strong class="benchmark-measurement">45%</strong></li>
+                <li><span>Round 2</span> <strong>Variant C</strong> <strong class="benchmark-measurement">75%</strong></li>
+                <li><span>Round 3</span> <strong>Variant D</strong> <strong class="benchmark-measurement">68%</strong></li>
               </ol>
-              <p class="benchmark-setting-note">The model sees measurements only for its picks.</p>
+              <p class="benchmark-round-more"><span aria-hidden="true">…</span> Repeat with feedback</p>
             </article>
           </div>
-          <p class="benchmark-settings-note">In zero-shot and few-shot, the lab measurements for the test variants are reserved for scoring.</p>
+          <p class="benchmark-settings-note">In zero-shot and few-shot, the lab result for A is revealed only for scoring.</p>
         </section>
-        <article class="intro-scope">
-          <h3>Across molecular systems</h3>
-          <div class="scope-visual">
-            <div class="scope-map" id="scope-molecules">
-              <div class="scope-lane"><div class="scope-domain"><span>Proteins</span><small>Mutation effects</small></div>
-                <svg class="scope-molecule molecule-protein" viewBox="0 0 160 64" role="img" aria-labelledby="scope-protein-title">
-                  <title id="scope-protein-title">Protein ribbon with gently turning folds; illustrative, not an experimental structure.</title>
-                  <g class="protein-fold molecule-motion">
-                    <path class="ribbon-back" d="M23 44C8 23 36 8 57 21S78 57 97 41 122 9 139 24"/>
-                    <path class="ribbon-front" d="M23 44C43 61 64 14 49 12S38 55 68 49 84 10 73 15 72 53 99 47 117 13 106 17 113 44 139 24"/>
-                    <path class="ribbon-glint" d="M24 42C44 57 63 15 49 14M50 38C60 61 88 40 81 24M86 39C99 57 120 33 111 21"/>
-                    <path class="ribbon-tail" d="M139 24q8 3 10 12"/>
-                    <circle class="molecule-accent" cx="68" cy="49" r="4"/>
-                  </g>
-                </svg>
-              </div>
-              <div class="scope-lane"><div class="scope-domain"><span>RNA</span><small>Mutation effects</small></div>
-                <svg class="scope-molecule molecule-rna" viewBox="0 0 160 64" role="img" aria-labelledby="scope-rna-title">
-                  <title id="scope-rna-title">Single RNA strand forming a paired stem and a gently flexing hairpin loop; schematic.</title>
-                  <g class="rna-stem">
-                    <path class="rna-backbone" d="M17 13q10 7 20 9H97M17 51q10-7 20-9H97"/>
-                    <path class="rna-pairs" d="M40 23v18M51 23v18M62 23v18M73 23v18M84 23v18"/>
-                    <path class="rna-pair-halves" d="M40 32v9M51 32v9M62 32v9M73 32v9M84 32v9"/>
-                  </g>
-                  <g class="rna-loop molecule-motion">
-                    <path class="rna-backbone" d="M97 22C110 7 137 8 140 29S111 58 97 42"/>
-                    <circle cx="113" cy="14" r="3"/><circle cx="132" cy="17" r="3"/><circle cx="140" cy="32" r="3"/><circle cx="131" cy="47" r="3"/><circle cx="111" cy="50" r="3"/>
-                  </g>
-                </svg>
-              </div>
-              <div class="scope-lane"><div class="scope-domain"><span>Complexes</span><small>Binding effects</small></div>
-                <svg class="scope-molecule molecule-interaction" viewBox="0 0 160 64" role="img" aria-labelledby="scope-interaction-title">
-                  <title id="scope-interaction-title">Two complementary molecular surfaces move slightly around a contact interface; schematic, not a binding simulation.</title>
-                  <g class="contact-left molecule-motion"><path class="contact-blue" d="M28 14C38 3 51 10 56 16 65 12 77 17 77 25 75 31 65 30 64 36 64 43 76 43 73 50 64 61 52 49 44 53 30 58 20 49 23 40 12 31 17 20 28 14Z"/><path class="contact-contour" d="M31 22c9-9 21 4 28 1M29 42q9-11 22 0"/></g>
-                  <g class="contact-bridges molecule-motion"><path d="m76 24 11 3M66 35h17m-9 12 12-4"/></g>
-                  <g class="contact-right molecule-motion"><path class="contact-pink" d="M93 14C101 7 110 12 116 10 131 6 140 17 136 26 148 36 137 48 127 47 122 58 106 55 100 49 90 52 82 48 85 42 89 36 94 38 95 32 96 26 83 29 85 22 86 18 88 17 93 14Z"/><path class="contact-contour" d="M106 21q13-5 18 5m-18 16q11 5 20-6"/></g>
-                </svg>
-              </div>
-              <div class="scope-lane"><div class="scope-domain"><span>Small molecules</span><small>Molecular properties</small></div>
-                <svg class="scope-molecule molecule-small" viewBox="0 0 160 64" role="img" aria-labelledby="scope-small-title">
-                  <title id="scope-small-title">Small-molecule bond diagram with a ring and a turning side group; schematic.</title>
-                  <g class="small-core molecule-motion">
-                    <path class="molecule-bond" d="m48 20 22-12 22 12v25L70 57 48 45Zm7 4 15-8m15 9v15M70 49l-15-8M48 20 30 11M48 45 29 54M92 20l21-8M92 45l22 9"/>
-                    <g class="small-branch molecule-motion"><path class="molecule-bond" d="m113 12 19 13 14-8"/><circle class="atom-rose" cx="146" cy="17" r="4"/></g>
-                    <circle class="atom-blue" cx="48" cy="20" r="4"/><circle class="atom-gold" cx="92" cy="45" r="4"/><circle class="atom-rose" cx="30" cy="11" r="4"/><circle class="atom-blue" cx="114" cy="54" r="3.5"/>
-                  </g>
-                </svg>
-              </div>
-            </div>
-            <div class="scope-motion-bar"><span>Molecular sketches</span><button class="scope-motion-toggle" type="button" aria-controls="scope-molecules" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="motion-pause" d="M5 3v10M11 3v10"/><path class="motion-play" d="m5 3 7 5-7 5Z"/></svg><span>Pause motion</span></button></div>
+        <article class="intro-scope scope-visual">
+          <div class="intro-scope-heading">
+            <h3>Across molecular systems</h3>
+            <button class="scope-motion-toggle" type="button" aria-controls="scope-molecules" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="motion-pause" d="M5 3v10M11 3v10"/><path class="motion-play" d="m5 3 7 5-7 5Z"/></svg><span>Pause motion</span></button>
           </div>
-          <p>Protein and RNA mutation effects, molecular interactions and small-molecule properties are evaluated within their own datasets and tasks.</p>
+          <div class="scope-map" id="scope-molecules">
+            <div class="scope-lane"><div class="scope-domain"><span>Proteins</span><small>Mutation effects</small></div>
+              <svg class="scope-molecule molecule-protein" viewBox="0 0 160 64" role="img" aria-labelledby="scope-protein-title">
+                <title id="scope-protein-title">Protein ribbon with gently turning folds; illustrative, not an experimental structure.</title>
+                <g class="protein-fold molecule-motion">
+                  <path class="ribbon-back" d="M23 44C8 23 36 8 57 21S78 57 97 41 122 9 139 24"/>
+                  <path class="ribbon-front" d="M23 44C43 61 64 14 49 12S38 55 68 49 84 10 73 15 72 53 99 47 117 13 106 17 113 44 139 24"/>
+                  <path class="ribbon-glint" d="M24 42C44 57 63 15 49 14M50 38C60 61 88 40 81 24M86 39C99 57 120 33 111 21"/>
+                  <path class="ribbon-tail" d="M139 24q8 3 10 12"/>
+                  <circle class="molecule-accent" cx="68" cy="49" r="4"/>
+                </g>
+              </svg>
+            </div>
+            <div class="scope-lane"><div class="scope-domain"><span>RNA</span><small>Mutation effects</small></div>
+              <svg class="scope-molecule molecule-rna" viewBox="0 0 160 64" role="img" aria-labelledby="scope-rna-title">
+                <title id="scope-rna-title">Single RNA strand forming a paired stem and a gently flexing hairpin loop; schematic.</title>
+                <g class="rna-stem">
+                  <path class="rna-backbone" d="M17 13q10 7 20 9H97M17 51q10-7 20-9H97"/>
+                  <path class="rna-pairs" d="M40 23v18M51 23v18M62 23v18M73 23v18M84 23v18"/>
+                  <path class="rna-pair-halves" d="M40 32v9M51 32v9M62 32v9M73 32v9M84 32v9"/>
+                </g>
+                <g class="rna-loop molecule-motion">
+                  <path class="rna-backbone" d="M97 22C110 7 137 8 140 29S111 58 97 42"/>
+                  <circle cx="113" cy="14" r="3"/><circle cx="132" cy="17" r="3"/><circle cx="140" cy="32" r="3"/><circle cx="131" cy="47" r="3"/><circle cx="111" cy="50" r="3"/>
+                </g>
+              </svg>
+            </div>
+            <div class="scope-lane"><div class="scope-domain"><span>Complexes</span><small>Binding effects</small></div>
+              <svg class="scope-molecule molecule-interaction" viewBox="0 0 160 64" role="img" aria-labelledby="scope-interaction-title">
+                <title id="scope-interaction-title">Two complementary molecular surfaces move slightly around a contact interface; schematic, not a binding simulation.</title>
+                <g class="contact-left molecule-motion"><path class="contact-blue" d="M28 14C38 3 51 10 56 16 65 12 77 17 77 25 75 31 65 30 64 36 64 43 76 43 73 50 64 61 52 49 44 53 30 58 20 49 23 40 12 31 17 20 28 14Z"/><path class="contact-contour" d="M31 22c9-9 21 4 28 1M29 42q9-11 22 0"/></g>
+                <g class="contact-bridges molecule-motion"><path d="m76 24 11 3M66 35h17m-9 12 12-4"/></g>
+                <g class="contact-right molecule-motion"><path class="contact-pink" d="M93 14C101 7 110 12 116 10 131 6 140 17 136 26 148 36 137 48 127 47 122 58 106 55 100 49 90 52 82 48 85 42 89 36 94 38 95 32 96 26 83 29 85 22 86 18 88 17 93 14Z"/><path class="contact-contour" d="M106 21q13-5 18 5m-18 16q11 5 20-6"/></g>
+              </svg>
+            </div>
+            <div class="scope-lane"><div class="scope-domain"><span>Small molecules</span><small>Molecular properties</small></div>
+              <svg class="scope-molecule molecule-small" viewBox="0 0 160 64" role="img" aria-labelledby="scope-small-title">
+                <title id="scope-small-title">Small-molecule bond diagram with a ring and a turning side group; schematic.</title>
+                <g class="small-core molecule-motion">
+                  <path class="molecule-bond" d="m48 20 22-12 22 12v25L70 57 48 45Zm7 4 15-8m15 9v15M70 49l-15-8M48 20 30 11M48 45 29 54M92 20l21-8M92 45l22 9"/>
+                  <g class="small-branch molecule-motion"><path class="molecule-bond" d="m113 12 19 13 14-8"/><circle class="atom-rose" cx="146" cy="17" r="4"/></g>
+                  <circle class="atom-blue" cx="48" cy="20" r="4"/><circle class="atom-gold" cx="92" cy="45" r="4"/><circle class="atom-rose" cx="30" cy="11" r="4"/><circle class="atom-blue" cx="114" cy="54" r="3.5"/>
+                </g>
+              </svg>
+            </div>
+          </div>
         </article>
       </div>
     </section>
