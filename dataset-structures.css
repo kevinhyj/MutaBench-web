@@ -1,21 +1,45 @@
-/* A single source-collection atlas, with large structure illustrations. */
-.datasets-part .part-heading { margin-bottom: 32px; }
-.source-atlas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid #bbc5d8; border-radius: 16px; background: #fffcfa70; overflow: hidden; }
-.source-panel { min-width: 0; padding: 18px 20px 22px; border-right: 1px solid #cbd0db; }
-.source-panel:nth-child(4) { border-right: 0; }
-.source-panel h3 { display: flex; align-items: center; justify-content: center; min-height: 60px; font-size: 23px; line-height: 1.35; text-align: center; text-wrap: balance; }
+/* One cell per structure, with the NABE pair kept under a shared heading. */
+.home-page .datasets-part { padding-block: 24px 30px; }
+.home-page .datasets-part .part-heading { margin-bottom: 14px; }
+.home-page .datasets-part .part-description { margin: 5px 0 0; font-size: 15px; line-height: 1.45; max-width: 70ch; }
+.source-atlas {
+  --scene-height: 122px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid #cbd0db;
+  border-radius: 12px;
+  background: #cbd0db;
+  overflow: hidden;
+}
+.source-panel { min-width: 0; padding: 8px 9px 12px; background: #fffcfa; }
+.source-panel h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  font-size: 19px;
+  line-height: 1.15;
+  text-align: center;
+  text-wrap: balance;
+}
 .source-figure { min-width: 0; }
-.source-scene { position: relative; height: 230px; max-width: 300px; margin-inline: auto; perspective: 700px; }
+.source-scene { position: relative; height: var(--scene-height); perspective: 700px; }
 .structure-float { position: absolute; inset: 4px 0; transform-origin: 50% 55%; }
-.structure-float img { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; }
-.source-figure figcaption { margin-top: 12px; text-align: center; font-size: 18px; line-height: 1.5; color: var(--ink); }
-.source-panel-nabe, .source-panel-platinum { grid-column: span 2; border-top: 1px solid #cbd0db; }
-.source-panel-platinum { border-right: 0; }
-.source-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.source-panel-platinum .source-scene { max-width: 340px; }
-/* Complete reference assemblies retain their own contact geometry. */
-.structure-float .wr-structure, .structure-float .structure-palette { position: absolute; inset: 5%; width: 90%; height: 90%; object-fit: contain; }
+.structure-float .wr-structure, .structure-float .structure-palette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
 .structure-float .palette-ready { visibility: hidden; }
+.source-figure figcaption { text-align: center; font-size: 14px; line-height: 1.3; color: var(--ink); text-wrap: balance; }
+.source-panel-nabe { grid-column: span 2; }
+.source-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.contribution-link { white-space: nowrap; text-decoration: underline; text-underline-offset: 0.18em; }
+
 /* Only the art moves. Labels, source boundaries and the reading layout stay still. */
 .source-atlas.motion-ready .structure-float { animation: structure-sway 6.5s ease-in-out infinite; animation-play-state: paused; }
 .source-atlas[data-motion="playing"] .source-figure.in-view .structure-float { animation-play-state: running; }
@@ -26,29 +50,30 @@
 .source-panel:nth-child(5) .source-figure:nth-child(2) .structure-float { animation-delay: -2s; }
 .source-panel:nth-child(6) .structure-float { animation-delay: -3s; animation-duration: 7.5s; }
 @keyframes structure-sway {
-  0%, 100% { transform: translateY(12px) rotateX(-6deg) rotateY(-14deg) rotateZ(-4deg); }
-  50% { transform: translateY(-12px) rotateX(6deg) rotateY(14deg) rotateZ(4deg); }
+  0%, 100% { transform: translateY(4px) rotateX(-6deg) rotateY(-14deg) rotateZ(-4deg); }
+  50% { transform: translateY(-4px) rotateX(6deg) rotateY(14deg) rotateZ(4deg); }
 }
-@media (max-width: 1000px) {
-  .source-atlas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .source-panel:nth-child(2) { border-right: 0; }
-  .source-panel:nth-child(3), .source-panel:nth-child(4) { border-top: 1px solid #cbd0db; }
-  .source-panel-nabe { border-right: 0; }
-  .source-panel h3 { min-height: 56px; }
-  .source-scene { height: 240px; }
+
+@media (max-width: 1179px) {
+  .home-page .datasets-part { padding-block: 18px 22px; }
+  .source-atlas { --scene-height: 100px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .source-panel-platinum { grid-column: span 2; }
 }
-@media (max-width: 600px) {
-  .source-atlas { grid-template-columns: 1fr; }
-  .source-panel { padding: 24px 16px 28px; border-right: 0; }
-  .source-panel + .source-panel { border-top: 1px solid #cbd0db; }
-  .source-panel-nabe, .source-panel-platinum { grid-column: auto; }
-  .source-panel h3 { min-height: auto; margin-bottom: 12px; font-size: 23px; }
-  .source-pair { grid-template-columns: 1fr; gap: 28px; }
-  .source-scene { height: 248px; max-width: 300px; }
-  .source-figure figcaption { margin-top: 12px; }
+@media (max-width: 699px) {
+  .home-page .datasets-part { padding-block: 14px 22px; }
+  .home-page .datasets-part .part-heading { margin-bottom: 10px; }
+  .source-atlas { --scene-height: 86px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .source-panel { padding: 6px 7px 9px; }
+  .source-panel h3 { min-height: 33px; font-size: 17px; }
+  .source-figure figcaption { font-size: 13px; }
+  .source-panel-platinum {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+  .source-panel-platinum .source-figure { display: grid; grid-template-columns: minmax(54px, .85fr) minmax(0, 1.15fr); align-items: center; }
+  .source-panel-platinum .source-scene { height: 64px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .source-atlas.motion-ready .structure-float { animation: none; }
 }
-
-.contribution-link { color: inherit; white-space: nowrap; text-decoration: underline; text-underline-offset: 0.18em; }
