@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="site.css?v=f4541c01c460" />
   <link rel="stylesheet" href="home.css?v=afdafa60ad1d" />
   <link rel="stylesheet" href="dataset-structures.css?v=8957c007b747" />
-  <link rel="stylesheet" href="intro.css?v=f547c214ab0f" />
+  <link rel="stylesheet" href="intro.css?v=cb470066d9c2" />
   <link rel="stylesheet" href="method.css?v=9451ef13eda0" />
   <script src="molecular-background.js?v=a17ddd9b49c7" defer></script>
   <script src="assets/results/leaderboards.js?v=802b40bc9dd8" defer></script>
@@ -61,7 +61,7 @@
         <header class="part-heading intro-heading">
           <div class="part-heading-title">
             <h2 id="intro-title">What is MutaBench?</h2>
-            <p class="part-subtitle">How well do general-purpose AI models and models trained on biological data predict what a mutation will do? MutaBench checks their predictions against real lab measurements.</p>
+            <p class="part-subtitle">How well do general-purpose AI models and models trained on biological data predict the effects of mutations? MutaBench checks their predictions against real lab measurements.</p>
           </div>
         </header>
         <figure class="benchmark-diagram" aria-labelledby="benchmark-example">
@@ -70,12 +70,12 @@
           </figcaption>
           <div class="benchmark-flow">
             <div class="benchmark-card benchmark-question">
-              <h3>One mutation, one question</h3>
+              <h3>A protein variant</h3>
               <div class="benchmark-chain" aria-hidden="true">
-                <span></span><span></span><span></span><span class="benchmark-chain-change"></span><span></span><span></span><span></span>
+                <span></span><span class="benchmark-chain-change"></span><span></span><span></span><span class="benchmark-chain-change"></span><span></span><span></span>
               </div>
-              <p class="benchmark-chain-label">One amino acid replaced</p>
-              <p class="benchmark-prompt">How does this change affect the protein’s activity?</p>
+              <p class="benchmark-chain-label">A variant can have one or more mutations.</p>
+              <p class="benchmark-prompt">How do these changes affect the protein’s activity?</p>
             </div>
             <div class="benchmark-connector benchmark-split" aria-hidden="true"><span></span></div>
             <div class="benchmark-model-stage">
@@ -106,10 +106,18 @@
         </div>
         <div class="intro-context">
           <article class="intro-context-item">
-            <h3>What the models get</h3>
-            <p><strong>Zero-shot.</strong> The models get the mutation question without any examples of measured effects.</p>
-            <p><strong>Few-shot.</strong> The models also get measured effects for other mutations from the same experiment.</p>
-            <p>MutaBench holds back the measured effect of the test mutation and uses it to score the predictions.</p>
+            <h3>How we test the models</h3>
+            <p><strong>Zero-shot.</strong> Models predict effects without seeing any measured examples.</p>
+            <p><strong>Few-shot.</strong> Models also see measured effects for other variants from the same experiment.</p>
+            <p>In both settings, measurements for the test variants are held back for scoring.</p>
+            <div class="benchmark-round">
+              <p><strong>Multi-round.</strong> Models see lab measurements only for the variants they picked. They use those results to guide their next picks.</p>
+              <ol class="benchmark-round-steps" aria-label="Multi-round feedback steps" role="list">
+                <li>Pick variants</li>
+                <li>See measurements</li>
+                <li>Pick again</li>
+              </ol>
+            </div>
           </article>
           <article class="intro-context-item intro-scope">
             <h3>Across molecular systems</h3>

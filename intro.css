@@ -162,6 +162,47 @@
 .intro-context-item { min-width: 0; }
 .intro-context-item h3 { font: 500 27px/1.2 var(--serif); margin-bottom: 14px; }
 .intro-context-item > p { margin-top: 9px; font-size: 16px; line-height: 1.55; max-width: 58ch; }
+.benchmark-round {
+  max-width: 58ch;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #d4dce8;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.benchmark-round-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.benchmark-round-steps li {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 36px;
+  padding: 5px 6px;
+  border: 1px solid #ccd7e8;
+  border-radius: 8px;
+  background: #edf1f8;
+  color: var(--ink);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.25;
+}
+.benchmark-round-steps li + li::before {
+  content: "";
+  position: absolute;
+  right: calc(100% + 6px);
+  top: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border: solid #7185a5;
+  border-width: 1px 1px 0 0;
+  transform: rotate(45deg);
+}
 @media (max-width: 899px) {
   .benchmark-flow { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; gap: 0; }
   .benchmark-question, .benchmark-lab, .benchmark-connector, .benchmark-model-stage { grid-area: auto; }
