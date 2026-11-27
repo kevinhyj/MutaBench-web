@@ -1,26 +1,3 @@
-/* An illustrative input comparison, never a prediction request or result view. */
-(() => {
-  const stage = document.querySelector('.benchmark-stage');
-  if (!stage) return;
-  const buttons = [...stage.querySelectorAll('.benchmark-setting-switch button')];
-  const support = stage.querySelector('.support-board');
-  const empty = stage.querySelector('.support-empty');
-  function choose(setting, interacted = false) {
-    stage.dataset.setting = setting;
-    if (interacted) stage.setAttribute('data-interacted', '');
-    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.setting === setting)));
-    support.hidden = setting === 'zero';
-    empty.hidden = setting !== 'zero';
-    stage.querySelectorAll('.benchmark-mode-copy p').forEach(copy => { copy.hidden = copy.id !== `intro-${setting}-copy`; });
-    // Query inputs and their masked measurements intentionally never change.
-  }
-  buttons.forEach(button => {
-    button.disabled = false;
-    button.addEventListener('click', () => choose(button.dataset.setting, true));
-  });
-  choose('few');
-})();
-
 /* Decorative molecular sketches; transforms do not simulate molecular dynamics. */
 (() => {
   const visual = document.querySelector('.scope-visual');

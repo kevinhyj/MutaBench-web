@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="site.css?v=f4541c01c460" />
   <link rel="stylesheet" href="home.css?v=afdafa60ad1d" />
   <link rel="stylesheet" href="dataset-structures.css?v=8957c007b747" />
-  <link rel="stylesheet" href="intro.css?v=8f66a2476dc7" />
+  <link rel="stylesheet" href="intro.css?v=f547c214ab0f" />
   <link rel="stylesheet" href="method.css?v=9451ef13eda0" />
   <script src="molecular-background.js?v=a17ddd9b49c7" defer></script>
   <script src="assets/results/leaderboards.js?v=802b40bc9dd8" defer></script>
@@ -18,7 +18,7 @@
   <script src="app.js?v=348738857a9b" defer></script>
   <script src="dataset-structures.js?v=4a3bd7789977" defer></script>
   <script src="structure-palette.js?v=d4158299ddf3" defer></script>
-  <script src="intro.js?v=8801d1149791" defer></script>
+  <script src="intro.js?v=678b4e0410d6" defer></script>
   <script src="method.js?v=9e1de50151af" defer></script>
   <script src="results-bars.js?v=51f1d45ec704" defer></script>
 </head>
@@ -60,45 +60,59 @@
       <div class="page-width">
         <header class="part-heading intro-heading">
           <div class="part-heading-title">
-          <h2 id="intro-title">What is MutaBench?</h2>
-          <p class="part-subtitle">Benchmarking mutation prediction</p>
+            <h2 id="intro-title">What is MutaBench?</h2>
+            <p class="part-subtitle">How well do general-purpose AI models and models trained on biological data predict what a mutation will do? MutaBench checks their predictions against real lab measurements.</p>
           </div>
         </header>
-        <article class="benchmark-stage" data-setting="few" aria-labelledby="intro-settings-title">
-          <div class="benchmark-question">
-            <h3 id="intro-settings-title">Two settings.<br /> One question.</h3>
-            <p class="benchmark-prompt">What can a model infer about an unseen effect?</p>
-            <div class="benchmark-setting-switch" role="group" aria-label="Compare input settings">
-              <button type="button" data-setting="zero" aria-pressed="false" aria-controls="intro-input-view intro-zero-copy" disabled><span class="setting-name">Zero-shot</span><span class="setting-description">Without measured examples</span></button>
-              <button type="button" data-setting="few" aria-pressed="true" aria-controls="intro-input-view intro-few-copy" disabled><span class="setting-name">Few-shot</span><span class="setting-description">With known examples</span></button>
+        <figure class="benchmark-diagram" aria-labelledby="benchmark-example">
+          <figcaption id="benchmark-example">
+            <strong>Illustrative example</strong> <span>Activity is shown relative to the original protein.</span>
+          </figcaption>
+          <div class="benchmark-flow">
+            <div class="benchmark-card benchmark-question">
+              <h3>One mutation, one question</h3>
+              <div class="benchmark-chain" aria-hidden="true">
+                <span></span><span></span><span></span><span class="benchmark-chain-change"></span><span></span><span></span><span></span>
+              </div>
+              <p class="benchmark-chain-label">One amino acid replaced</p>
+              <p class="benchmark-prompt">How does this change affect the protein’s activity?</p>
             </div>
-          </div>
-          <figure id="intro-input-view" class="benchmark-input-view" aria-label="Schematic model input: known support labels can be supplied, while held-out query labels always remain hidden. Rows are illustrative, not a fixed sample count.">
-            <figcaption>What the model sees</figcaption>
-            <div class="input-composition">
-              <div class="support-slot">
-                <div class="support-empty" hidden><span class="empty-symbol" aria-hidden="true">∅</span><p>No measured<br />examples</p></div>
-                <div class="support-board"><div class="input-board-heading"><span>Known examples</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
-                  <div class="input-column-labels"><span>Sample</span><span>Effect</span></div><div class="support-example"><span>Example A</span><span class="known-value"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg>Known</span></div><div class="support-example"><span>Example B</span><span class="known-value"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg>Known</span></div><div class="support-example"><span>Example C</span><span class="known-value"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg>Known</span></div>
-                  <p class="support-board-note">Provided to the model</p>
+            <div class="benchmark-connector benchmark-split" aria-hidden="true"><span></span></div>
+            <div class="benchmark-model-stage">
+              <h3>Two kinds of AI predict the effect</h3>
+              <div class="benchmark-models">
+                <div class="benchmark-card benchmark-model benchmark-llm">
+                  <h4>General-purpose language model <span>(LLM)</span></h4>
+                  <p>General-purpose AI</p>
+                  <p class="benchmark-value"><span>Predicts</span> <strong>55%</strong></p>
+                </div>
+                <div class="benchmark-card benchmark-model benchmark-biofm">
+                  <h4>Biological foundation model <span>(BioFM)</span></h4>
+                  <p>Trained on biological data</p>
+                  <p class="benchmark-value"><span>Predicts</span> <strong>65%</strong></p>
                 </div>
               </div>
-              <span class="input-plus" aria-hidden="true">+</span>
-              <div class="query-board">
-                <div class="input-board-heading"><span>Held-out queries</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="12" rx="3"/></svg></div>
-                <div class="input-column-labels"><span>Sample</span><span>Effect</span></div><div class="query-example"><span>Query A</span><span class="withheld-value" aria-label="Measured effect withheld"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="12" rx="3"/></svg></span></div><div class="query-example"><span>Query B</span><span class="withheld-value" aria-label="Measured effect withheld"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="12" rx="3"/></svg></span></div><div class="query-example"><span>Query C</span><span class="withheld-value" aria-label="Measured effect withheld"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="12" rx="3"/></svg></span></div>
-                <p class="query-board-note">For the model to predict</p>
-              </div>
             </div>
-            <div class="benchmark-mode-copy" aria-live="polite" aria-atomic="true">
-              <p id="intro-zero-copy"><strong>Zero-shot.</strong> Task context and the query inputs only. No measured examples are supplied.</p>
-              <p id="intro-few-copy"><strong>Few-shot.</strong> Add known support from the same assay. The query set stays fixed; the example count depends on the protocol.</p>
+            <div class="benchmark-connector benchmark-merge" aria-hidden="true"><span></span></div>
+            <div class="benchmark-card benchmark-lab">
+              <h3>Both predictions are checked against lab measurements</h3>
+              <p class="benchmark-value"><span>Measured activity</span> <strong>60%</strong></p>
             </div>
-          </figure>
-        </article>
+          </div>
+        </figure>
+        <div class="benchmark-results">
+          <p>See how the two model families perform across tasks.</p>
+          <a class="benchmark-results-link" href="#results">Compare model results <span aria-hidden="true">↓</span></a>
+        </div>
         <div class="intro-context">
+          <article class="intro-context-item">
+            <h3>What the models get</h3>
+            <p><strong>Zero-shot.</strong> The models get the mutation question without any examples of measured effects.</p>
+            <p><strong>Few-shot.</strong> The models also get measured effects for other mutations from the same experiment.</p>
+            <p>MutaBench holds back the measured effect of the test mutation and uses it to score the predictions.</p>
+          </article>
           <article class="intro-context-item intro-scope">
-            <h3>Across molecular systems.</h3>
+            <h3>Across molecular systems</h3>
             <div class="scope-visual">
               <div class="scope-map" id="scope-molecules">
                 <div class="scope-lane"><div class="scope-domain"><span>Proteins</span><small>Mutation effects</small></div>
@@ -127,7 +141,7 @@
                     </g>
                   </svg>
                 </div>
-                <div class="scope-lane"><div class="scope-domain"><span>Complex</span><small>Binding effects</small></div>
+                <div class="scope-lane"><div class="scope-domain"><span>Complexes</span><small>Binding effects</small></div>
                   <svg class="scope-molecule molecule-interaction" viewBox="0 0 160 64" role="img" aria-labelledby="scope-interaction-title">
                     <title id="scope-interaction-title">Two complementary molecular surfaces move slightly around a contact interface; schematic, not a binding simulation.</title>
                     <g class="contact-left molecule-motion"><path class="contact-blue" d="M28 14C38 3 51 10 56 16 65 12 77 17 77 25 75 31 65 30 64 36 64 43 76 43 73 50 64 61 52 49 44 53 30 58 20 49 23 40 12 31 17 20 28 14Z"/><path class="contact-contour" d="M31 22c9-9 21 4 28 1M29 42q9-11 22 0"/></g>
@@ -149,16 +163,6 @@
               <div class="scope-motion-bar"><span>Molecular sketches</span><button class="scope-motion-toggle" type="button" aria-controls="scope-molecules" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path class="motion-pause" d="M5 3v10M11 3v10"/><path class="motion-play" d="m5 3 7 5-7 5Z"/></svg><span>Pause motion</span></button></div>
             </div>
             <p>Protein and RNA mutation effects, molecular interactions and small-molecule properties are evaluated within their own datasets and tasks.</p>
-          </article>
-          <article class="intro-context-item intro-families">
-            <h3>Language and biological models.</h3>
-            <div class="model-family-comparison" role="img" aria-label="Language models and biological foundation models feed a task-specific comparison of predictions against held-out measurements. Diagram illustrates the comparison, not model scores.">
-              <div class="model-family model-family-language"><span class="family-name">LLMs</span><span class="family-description">Language models</span><div class="family-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
-              <div class="model-family model-family-bio"><span class="family-name">BioFMs</span><span class="family-description">Biological models</span><div class="family-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
-              <svg class="comparison-paths" viewBox="0 0 560 100" preserveAspectRatio="none" aria-hidden="true"><path class="language-path" d="M140 2v24c0 35 140 5 140 48v24"/><path class="bio-path" d="M420 2v24c0 35-140 5-140 48v24"/><circle cx="140" cy="2" r="3"/><circle cx="420" cy="2" r="3"/></svg>
-              <div class="comparison-destination"><span>Task-specific comparison</span><small>Predictions <span aria-hidden="true">×</span> held-out measurements</small></div>
-            </div>
-            <p>Zero-shot and few-shot protocols compare model predictions with held-out measurements, keeping task-specific scores and coverage visible.</p>
           </article>
         </div>
       </div>
